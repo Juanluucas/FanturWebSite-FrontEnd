@@ -3,6 +3,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';  
 
 import '../assets/css/templatemo-training-studio.css';  
+import Video from '../assets/images/gym-video.mp4'
 
 
 function Home() {
@@ -64,9 +65,19 @@ function Home() {
 
           {/* <!-- ***** Main Banner Area Start ***** --> */}
           <div class="main-banner" id="top">
-              <video autoplay muted loop id="bg-video">
+
+
+
+              {/* <video autoplay muted loop id="bg-video">
                   <source src={require("../assets/images/gym-video.mp4")} type="video/mp4" />
+              </video> */}
+
+              <video autoPlay loop id="video">
+              <source src= {Video} type='video/mp4' />
               </video>
+
+
+
 
               <div class="video-overlay header-text">
                   <div class="caption">
