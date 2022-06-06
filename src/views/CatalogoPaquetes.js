@@ -17,7 +17,7 @@ function CatalogoPaquetes() {
                     cantidad:50,
                     evento:"aca va lista de eventos?",
                 }
-                
+
             ]
   
   
@@ -58,9 +58,10 @@ function CatalogoPaquetes() {
               
       </header>
           
-
-      <section class="section" id="trainers">
+    {/* <!-- ***** no navbar ***** --> */}
+      <section class="section" id="trainers">   
               <div class="container">
+                       {/* <!-- ***** TITULO ***** --> */}       
                   <div class="row">
                       <div class="col-lg-6 offset-lg-3">
                           <div class="section-heading">
@@ -69,21 +70,57 @@ function CatalogoPaquetes() {
                               <p>Ofrecemos los mejores paquetes de viajes para que no tengas que preocuparte de nada</p>
                           </div>
                       </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-lg-4">
-                          paquete1
-                      </div>
-                      <div class="col-lg-4">
-                          paquete2
-                      </div>
-                      <div class="col-lg-4">
-                         paquete3
-                      </div>
+                    </div>
+
+                  <div class="row" id="listado de paquetes">
+                    <div class="col-lg-4" id="paquete1">
+                        
+                        <div class="movie-item-style-2">
+                        <img src={require("../assets/images/mv1.jpg")} alt=""/>
+                            <div class="mv-item-infor">
+                                <h6><a href="moviesingle.html">oblivion <span>(2012)</span></a></h6>
+                                <p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+                                <p class="describe">Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity...</p>
+                                <p class="run-time"> Run Time: 2h21’    .     <span>MMPA: PG-13 </span>    .     <span>Release: 1 May 2015</span></p>
+                                <p>Director: <a href="/#">Joss Whedon</a></p>
+                                <p>Stars: <a href="/#">Robert Downey Jr.,</a> <a href="/#">Chris Evans,</a> <a href="/#">  Chris Hemsworth</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" id="paquete2">
+                       
+                    <div class="movie-item-style-2">
+                        <img src={require("../assets/images/mv2.jpg")} alt=""/>
+                            <div class="mv-item-infor">
+                                <h6><a href="moviesingle.html">oblivion <span>(2012)</span></a></h6>
+                                <p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+                                <p class="describe">Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity...</p>
+                                <p class="run-time"> Run Time: 2h21’    .     <span>MMPA: PG-13 </span>    .     <span>Release: 1 May 2015</span></p>
+                                <p>Director: <a href="/#">Joss Whedon</a></p>
+                                <p>Stars: <a href="/#">Robert Downey Jr.,</a> <a href="/#">Chris Evans,</a> <a href="/#">  Chris Hemsworth</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4" id="paquete3">
+                        
+                    <div class="movie-item-style-2">
+                        <img src={require("../assets/images/mv3.jpg")} alt=""/>
+                            <div class="mv-item-infor">
+                                <h6><a href="moviesingle.html">oblivion <span>(2012)</span></a></h6>
+                                <p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+                                <p class="describe">Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity...</p>
+                                <p class="run-time"> Run Time: 2h21’    .     <span>MMPA: PG-13 </span>    .     <span>Release: 1 May 2015</span></p>
+                                <p>Director: <a href="/#">Joss Whedon</a></p>
+                                <p>Stars: <a href="/#">Robert Downey Jr.,</a> <a href="/#">Chris Evans,</a> <a href="/#">  Chris Hemsworth</a></p>
+                            </div>
+                        </div>
+                        
+                    </div>
                       
                   </div>
               </div>
-          </section>
+       </section>
     </div>
   );
 }
