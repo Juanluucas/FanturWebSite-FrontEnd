@@ -1,8 +1,8 @@
 import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.min.css';  
-
 import '../assets/css/templatemo-training-studio.css';  
+import '../assets/css/CatalogoPaquetes.css'; 
 import Video from '../assets/images/video1-2.mp4'
 
 
@@ -48,8 +48,8 @@ function Home() {
                                   <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                                   <li class="scroll-to-section"><a href="#features">Nuestros Servicios</a></li>
                                   <li class="scroll-to-section"><a href="#our-classes">Fases</a></li>
-                                  <li ><a href="/CatalogoPaquetes">Catalogo Paquetes</a></li>
                                   <li class="scroll-to-section"><a href="#schedule">Conocenos</a></li> 
+                                  <li ><a href="/CatalogoPaquetes">Catalogo Paquetes</a></li>
                                   <li class="main-button"><a href="/login">Sign Up</a></li>
                               </ul>        
                               {/* <a class='menu-trigger'>
