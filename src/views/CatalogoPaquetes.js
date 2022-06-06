@@ -2,7 +2,7 @@ import React from "react";
 function CatalogoPaquetes() {
   return (
     <div className="CatalogoPaquetes">
-      CatalogoPaquetes
+      
 
       <section class="section" id="trainers">
               <div class="container">

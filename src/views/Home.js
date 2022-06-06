@@ -34,7 +34,7 @@ function Home() {
           
 
           
-          {/* <!-- ***** Header Area Start ***** --> */}
+          {/* <!-- ***** Header Area Start//NAVBAR ***** --> */}
           <header class="header-area header-sticky">
               <div class="container">
                   <div class="row">
@@ -49,8 +49,8 @@ function Home() {
                                   <li class="scroll-to-section"><a href="#features">Nuestros Servicios</a></li>
                                   <li class="scroll-to-section"><a href="#our-classes">Fases</a></li>
                                   <li ><a href="/CatalogoPaquetes">Catalogo Paquetes</a></li>
-                                  <li ><a href="/Conocenos">Conocenos</a></li> 
-                                  <li class="main-button"><a href="/#">Sign Up</a></li>
+                                  <li class="scroll-to-section"><a href="#schedule">Conocenos</a></li> 
+                                  <li class="main-button"><a href="/login">Sign Up</a></li>
                               </ul>        
                               {/* <a class='menu-trigger'>
                                   <span>Menu</span>
@@ -61,7 +61,7 @@ function Home() {
                   </div>
               </div>
           </header>
-          {/* <!-- ***** Header Area End ***** --> */}
+          
 
           {/* <!-- ***** Main Banner Area Start ***** --> */}
           <div class="main-banner" id="top">
@@ -269,7 +269,7 @@ function Home() {
               </div>
           </section>
           
-          
+          {/* <!-- ***** Conocenos ***** --> */}
           <section class="section" id="schedule">        
               <div class="container">
                   <div class="row">
@@ -340,20 +340,7 @@ function Home() {
           </section>
 
          
-          {/* <!-- ***** Testimonials Ends ***** --> */}
-          
-          {/* <!-- ***** Contact Us Area Starts ***** --> */}
-          <section class="section" id="contact-us">
-              <div class="container-fluid">
-                  <div class="row">
-                      <div class="col-lg-6 col-md-6 col-xs-12">
-                         
-                      </div>
-                  </div>
-              </div>
-          </section>
-          {/* <!-- ***** Contact Us Area Ends ***** --> */}
-          
+                
           {/* <!-- ***** Footer Start ***** --> */}
           <footer>
               <div class="container">
