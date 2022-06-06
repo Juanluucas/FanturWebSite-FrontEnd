@@ -9,7 +9,7 @@ import Login from "./views/Login";
 function App() {
   return (
     <div>
-         <p>App.js</p>
+      
       <BrowserRouter>
           <Routes>
 
