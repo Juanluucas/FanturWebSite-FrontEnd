@@ -3,7 +3,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';  
 
 import '../assets/css/templatemo-training-studio.css';  
-import Video from '../assets/images/gym-video.mp4'
+import Video from '../assets/images/video1-2.mp4'
 
 
 function Home() {
@@ -72,7 +72,7 @@ function Home() {
                   <source src={require("../assets/images/gym-video.mp4")} type="video/mp4" />
               </video> */}
 
-              <video autoPlay loop id="video">
+              <video autoPlay muted loop id="bg-video">
               <source src= {Video} type='video/mp4' />
               </video>
 
