@@ -3,7 +3,30 @@ import React from "react";
 
 
 function CatalogoPaquetes() {
-  return (
+  
+  
+  let paquete = [
+
+                {
+                    nombre: "fases de grupo",
+                    precio: 1500,
+                    hotel: "5 estrellas",
+                    avion:"si",
+                    micro:"si",
+                    seguroCovid:"si",
+                    cantidad:50,
+                    evento:"aca va lista de eventos?",
+                }
+                
+            ]
+  
+  
+  
+  
+  
+  
+  
+    return (
     <div className="CatalogoPaquetes">
       
       {/* <!-- ***** Header Area Start//NAVBAR ***** --> */}
@@ -41,67 +64,23 @@ function CatalogoPaquetes() {
                   <div class="row">
                       <div class="col-lg-6 offset-lg-3">
                           <div class="section-heading">
-                              <h2>Expert <em>Trainers</em></h2>
+                              <h2>Paquetes de  <em>Viaje</em></h2>
                               <img src={require("../assets/images/line-dec.png")} alt=""/>
-                              <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
+                              <p>Ofrecemos los mejores paquetes de viajes para que no tengas que preocuparte de nada</p>
                           </div>
                       </div>
                   </div>
                   <div class="row">
                       <div class="col-lg-4">
-                          <div class="trainer-item">
-                              <div class="image-thumb">
-                                  <img src={require("../assets/images/first-trainer.jpg")} alt=""/>
-                              </div>
-                              <div class="down-content">
-                                  <span>Strength Trainer</span>
-                                  <h4>Bret D. Bowers</h4>
-                                  <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                                  <ul class="social-icons">
-                                      <li><a href="/#"><i class="fa fa-facebook"></i></a></li>
-                                      <li><a href="/#"><i class="fa fa-twitter"></i></a></li>
-                                      <li><a href="/#"><i class="fa fa-linkedin"></i></a></li>
-                                      <li><a href="/#"><i class="fa fa-behance"></i></a></li>
-                                  </ul>
-                              </div>
-                          </div>
+                          paquete1
                       </div>
                       <div class="col-lg-4">
-                          <div class="trainer-item">
-                              <div class="image-thumb">
-                                  <img src={require("../assets/images/second-trainer.jpg")} alt=""/>
-                              </div>
-                              <div class="down-content">
-                                  <span>Muscle Trainer</span>
-                                  <h4>Hector T. Daigl</h4>
-                                  <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                                  <ul class="social-icons">
-                                      <li><a href="/#"><i class="fa fa-facebook"></i></a></li>
-                                      <li><a href="/#"><i class="fa fa-twitter"></i></a></li>
-                                      <li><a href="/#"><i class="fa fa-linkedin"></i></a></li>
-                                      <li><a href="/#"><i class="fa fa-behance"></i></a></li>
-                                  </ul>
-                              </div>
-                          </div>
+                          paquete2
                       </div>
                       <div class="col-lg-4">
-                          <div class="trainer-item">
-                              <div class="image-thumb">
-                                  <img src={require("../assets/images/third-trainer.jpg")} alt=""/>
-                              </div>
-                              <div class="down-content">
-                                  <span>Power Trainer</span>
-                                  <h4>Paul D. Newman</h4>
-                                  <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                                  <ul class="social-icons">
-                                      <li><a href="/#"><i class="fa fa-facebook"></i></a></li>
-                                      <li><a href="/#"><i class="fa fa-twitter"></i></a></li>
-                                      <li><a href="/#"><i class="fa fa-linkedin"></i></a></li>
-                                      <li><a href="/#"><i class="fa fa-behance"></i></a></li>
-                                  </ul>
-                              </div>
-                          </div>
+                         paquete3
                       </div>
+                      
                   </div>
               </div>
           </section>
