@@ -47,7 +47,7 @@ function Home() {
                               <ul class="nav">
                                   <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                                   <li ><a href="/CatalogoPaquetes">Catalogo Paquetes</a></li>
-                                  <li class="scroll-to-section"><a href="#features">About</a></li>
+                                  <li class="scroll-to-section"><a href="#features">Nuestros Servicios</a></li>
                                   <li class="scroll-to-section"><a href="#our-classes">Classes</a></li>
                                   <li ><a href="/Conocenos">Conocenos</a></li> 
                                   <li class="main-button"><a href="/#">Sign Up</a></li>
@@ -81,8 +81,8 @@ function Home() {
 
               <div class="video-overlay header-text">
                   <div class="caption">
-                      <h6>work harder, get stronger</h6>
-                      <h2>easy with our <em>gym</em></h2>
+                      <h6>Copa Mundial de la FIFA Catar 2022</h6>
+                      <h2>Donde vivirás el <em>Fútbol</em></h2>
                       <div class="main-button scroll-to-section">
                           <a href="#features">Become a member</a>
                       </div>
@@ -97,9 +97,9 @@ function Home() {
                   <div class="row">
                       <div class="col-lg-6 offset-lg-3">
                           <div class="section-heading">
-                              <h2>Choose <em>Program</em></h2>
+                              <h2>Servicios <em>Estrellas</em></h2>
                               <img src={require("../assets/images/line-dec.png")} alt="waves"/>
-                              <p>Training Studio is free CSS template for gyms and fitness centers. You are allowed to use this layout for your business website.</p>
+                              <p>items especiales que ofrecemos a nuestros clientes especiales</p>
                           </div>
                       </div>
                       <div class="col-lg-6">
@@ -109,8 +109,8 @@ function Home() {
                                       <img src={require("../assets/images/features-first-icon.png")} alt="First One"/>
                                   </div>
                                   <div class="right-content">
-                                      <h4>Basic Fitness</h4>
-                                      <p>Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.</p>
+                                      <h4>Hoteles de Lujos</h4>
+                                      <p>Hoteles a minutos de los estadios, con todas las atenciones que un verdadero fan necesita</p>
                                       <a href="/#" class="text-button">Discover More</a>
                                   </div>
                               </li>
@@ -119,8 +119,8 @@ function Home() {
                                       <img src={require("../assets/images/features-first-icon.png")} alt="second one"/>
                                   </div>
                                   <div class="right-content">
-                                      <h4>New Gym Training</h4>
-                                      <p>If you wish to support TemplateMo website via PayPal, please feel free to contact us. We appreciate it a lot.</p>
+                                      <h4>Cobertura medica COVID</h4>
+                                      <p>Te tenemos cubierto en caso de que te agarre el COVID-19 con un coctel de vacunas no aprobadas</p>
                                       <a href="/#" class="text-button">Discover More</a>
                                   </div>
                               </li>
@@ -129,8 +129,8 @@ function Home() {
                                       <img src={require("../assets/images/features-first-icon.png")} alt="third gym training"/>
                                   </div>
                                   <div class="right-content">
-                                      <h4>Basic Muscle Course</h4>
-                                      <p>Credit goes to <a rel="nofollow" href="/#" target="_blank">Pexels website</a> for images and video background used in this HTML template.</p>
+                                      <h4>Ven con tu familia o amigos</h4>
+                                      <p>Nuestro sistema web cuenta con la opcion de que adquieras el paquete para tu grupo familiar o amistades, con una sola gestion</p>
                                       <a href="/#" class="text-button">Discover More</a>
                                   </div>
                               </li>
@@ -143,8 +143,8 @@ function Home() {
                                       <img src={require("../assets/images/features-first-icon.png")} alt="fourth muscle"/>
                                   </div>
                                   <div class="right-content">
-                                      <h4>Advanced Muscle Course</h4>
-                                      <p>You may want to browse through <a rel="nofollow" href="https://templatemo.com/tag/digital-marketing" target="_parent">Digital Marketing</a> or <a href="https://templatemo.com/tag/corporate">Corporate</a> HTML CSS templates on our website.</p>
+                                      <h4>Entradas a los Partidos</h4>
+                                      <p>Todos nuestros paquetes cuentan con la entrada para los partidos, para que no te quedes afuera de ninguno</p>
                                       <a href="/#" class="text-button">Discover More</a>
                                   </div>
                               </li>
@@ -153,8 +153,8 @@ function Home() {
                                       <img src={require("../assets/images/features-first-icon.png")} alt="training fifth"/>
                                   </div>
                                   <div class="right-content">
-                                      <h4>Yoga Training</h4>
-                                      <p>This template is built on Bootstrap v4.3.1 framework. It is easy to adapt the columns and sections.</p>
+                                      <h4>Aviones</h4>
+                                      <p>Contamos con una flota de aviones propias para que llegues a Qatar estés donde estés</p>
                                       <a href="/#" class="text-button">Discover More</a>
                                   </div>
                               </li>
@@ -163,8 +163,8 @@ function Home() {
                                       <img src={require("../assets/images/features-first-icon.png")} alt="gym training"/>
                                   </div>
                                   <div class="right-content">
-                                      <h4>Body Building Course</h4>
-                                      <p>Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi. Integer nibh sapien, vehicula et auctor.</p>
+                                      <h4>Micro</h4>
+                                      <p>Autobuses del hotel al estadio incluido con la compra del paquete.</p>
                                       <a href="/#" class="text-button">Discover More</a>
                                   </div>
                               </li>
@@ -181,8 +181,8 @@ function Home() {
                   <div class="row">
                       <div class="col-lg-10 offset-lg-1">
                           <div class="cta-content">
-                              <h2>Don’t <em>think</em>, begin <em>today</em>!</h2>
-                              <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula, sit amet dapibus odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
+                              <h2>NO LO <em>PIENSES</em>, COMPRA <em>YA</em>!</h2>
+                              <p>Es el ultimo mundial de Messi, te lo vas a perder??? .</p>
                               <div class="main-button scroll-to-section">
                                   <a href="#our-classes">Become a member</a>
                               </div>
@@ -199,7 +199,7 @@ function Home() {
                   <div class="row">
                       <div class="col-lg-6 offset-lg-3">
                           <div class="section-heading">
-                              <h2>Our <em>Classes</em></h2>
+                              <h2>Las fases del<em> Mundial</em></h2>
                               <img src={require("../assets/images/line-dec.png")} alt=""/>
                               <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
                           </div>
@@ -208,10 +208,11 @@ function Home() {
                   <div class="row" id="tabs">
                     <div class="col-lg-4">
                       <ul>
-                        <li><a href='#tabs-1'><img src={require("../assets/images/tabs-first-icon.png")} alt=""/>First Training Class</a></li>
-                        <li><a href='#tabs-2'><img src={require("../assets/images/tabs-first-icon.png")} alt=""/>Second Training Class</a></li>
-                        <li><a href='#tabs-3'><img src={require("../assets/images/tabs-first-icon.png")} alt=""/>Third Training Class</a></li>
-                        <li><a href='#tabs-4'><img src={require("../assets/images/tabs-first-icon.png")} alt=""/>Fourth Training Class</a></li>
+                        <li><a href='#tabs-1'><img src={require("../assets/images/tabs-first-icon.png")} alt=""/>Fases de grupos</a></li>
+                        <li><a href='#tabs-2'><img src={require("../assets/images/tabs-first-icon.png")} alt=""/>Octavos de final</a></li>
+                        <li><a href='#tabs-3'><img src={require("../assets/images/tabs-first-icon.png")} alt=""/>Cuartos de final</a></li>
+                        <li><a href='#tabs-4'><img src={require("../assets/images/tabs-first-icon.png")} alt=""/>Semifinal</a></li>
+                        <li><a href='#tabs-4'><img src={require("../assets/images/tabs-first-icon.png")} alt=""/>final</a></li>
                         <div class="main-rounded-button"><a href="/#">View All Schedules</a></div>
                       </ul>
                     </div>
