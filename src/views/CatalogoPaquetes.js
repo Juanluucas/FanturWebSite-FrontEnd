@@ -20,40 +20,40 @@ function CatalogoPaquetes() {
   return (
     <div className="CatalogoPaquetes">
       {/* <!-- ***** Header Area Start//NAVBAR ***** --> */}
-      <header class="header-area header-sticky header background-header">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <nav class="main-nav">
+      <header className="header-area header-sticky header background-header">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <nav className="main-nav">
                 {/* <!-- ***** Logo Start ***** --> */}
-                <a href="/" class="logo">
+                <a href="/" className="logo">
                   FAN<em> TUR</em>
                 </a>
 
                 {/* <!-- ***** Menu Start ***** --> */}
-                <ul class="nav">
-                  <li class="scroll-to-section">
+                <ul className="nav">
+                  <li className="scroll-to-section">
                     <a href="/">Home</a>
                   </li>
-                  <li class="scroll-to-section">
+                  <li className="scroll-to-section">
                     <a href="/#features">Nuestros Servicios</a>
                   </li>
-                  <li class="scroll-to-section">
+                  <li className="scroll-to-section">
                     <a href="/#our-classes">Fases</a>
                   </li>
-                  <li class="scroll-to-section">
+                  <li className="scroll-to-section">
                     <a href="/#schedule">Conocenos</a>
                   </li>
                   <li>
-                    <a href="/CatalogoPaquetes" class="active">
+                    <a href="/CatalogoPaquetes" className="active">
                       Catalogo Paquetes
                     </a>
                   </li>
-                  <li class="main-button">
+                  <li className="main-button">
                     <a href="/login">Sign Up</a>
                   </li>
                 </ul>
-                {/* <a class='menu-trigger'>
+                {/* <a className='menu-trigger'>
                                   <span>Menu</span>
                               </a> */}
                 {/* <!-- ***** Menu End ***** --> */}
@@ -64,26 +64,27 @@ function CatalogoPaquetes() {
       </header>
 
       {/* <!-- ***** no navbar ***** --> */}
-      <section class="section" id="trainers">
-        <div class="container">
+      <section className="section" id="trainers">
+        <div className="container">
           {/* <!-- ***** TITULO ***** --> */}
-          <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-              <div class="section-heading">
+          <div className="row">
+            <div className="col-lg-6 offset-lg-3">
+              <div className="section-heading">
                 <h2>
                   Paquetes de <em>Viaje</em>
                 </h2>
                 <img src={require("../assets/images/line-dec.png")} alt="" />
                 <p>
                   Ofrecemos los mejores paquetes de viajes para que no tengas
-                  que preocuparte de nada
+                  que preocuparte de nada.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="row" id="listado de paquetes">
+          <div className="row" id="listado de paquetes">
             <Paquete/>
+            
             
            
 

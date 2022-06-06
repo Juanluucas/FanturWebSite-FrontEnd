@@ -68,9 +68,6 @@ function Home() {
 
 
 
-              {/* <video autoplay muted loop id="bg-video">
-                  <source src={require("../assets/images/gym-video.mp4")} type="video/mp4" />
-              </video> */}
 
               <video autoPlay muted loop id="bg-video">
               <source src= {Video} type='video/mp4' />

@@ -33,7 +33,35 @@ font & reset css
 ---------------------------------------------
 reset
 --------------------------------------------- 
+
+
+
 */
+.movie-item-style-2 {
+  /* background-color: #0e0e0e06; */
+  background-color: #EFEFEF;
+
+  border-radius: 40px;
+  margin-bottom: 20px;
+  
+}
+.paquete-boton {
+text-align: end;
+margin-right: 40px;
+
+}
+
+.mv-item-infor {
+  margin-left: 40px;
+}
+.paquete-imagen {
+  text-align:center;
+  }
+  
+.paquete-titulo {
+  font-size:20px;  
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
