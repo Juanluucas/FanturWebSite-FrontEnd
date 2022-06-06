@@ -1,4 +1,10 @@
-Corran npm install o npm -i .. y luego ejecutenlo con npm run start 
+---------------------------------------------------------------
+
+# Corran npm install o npm -i .. y luego ejecutenlo con npm run start 
+
+
+----------------------------------------------------------------
+
 
 # Getting Started with Create React App
 
