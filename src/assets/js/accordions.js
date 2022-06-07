@@ -5453,7 +5453,7 @@ $.extend(Datepicker.prototype, {
 		selectOtherMonths = this._get(inst, "selectOtherMonths");
 		defaultDate = this._getDefaultDate(inst);
 		html = "";
-		dow;
+		
 		for (row = 0; row < numMonths[0]; row++) {
 			group = "";
 			this.maxRows = 4;
@@ -10344,7 +10344,6 @@ $.extend( $.effects, {
 		// Firefox incorrectly exposes anonymous content
 		// https://bugzilla.mozilla.org/show_bug.cgi?id=561664
 		try {
-			active.id;
 		} catch ( e ) {
 			active = document.body;
 		}

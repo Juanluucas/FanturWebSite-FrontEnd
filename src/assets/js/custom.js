@@ -1,3 +1,4 @@
+import scrollReveal from './scrollreveal.min'; 
 (function ($) {
 	
 	"use strict";
