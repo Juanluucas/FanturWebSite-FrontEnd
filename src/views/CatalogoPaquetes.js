@@ -73,7 +73,7 @@ function CatalogoPaquetes() {
                 <h2>
                   Paquetes de <em>Viaje</em>
                 </h2>
-                <img src={require("../assets/images/line-dec.png")} alt="" />
+                <img src={require("../assets/images/line-dec.png").default} alt="" />
                 <p>
                   Ofrecemos los mejores paquetes de viajes para que no tengas
                   que preocuparte de nada.
@@ -85,7 +85,7 @@ function CatalogoPaquetes() {
           <div className="row" id="listado de paquetes">
             
 
-            <Paquete nombre="fases de grupo" precio="1500" hotel="5 estrellas" avion="si" micro="si" seguroCovid="si" cantidad="0" evento="aca va lista de eventos?" />
+            <Paquete nombre="fases de grupo" precio="1500" hotel="5 estrellas" avion="si" micro="si" seguroCovid="si" cantidad="0" evento="aca va lista de eventos?" img="https://cdn.pixabay.com/photo/2021/09/02/16/48/cat-6593947_960_720.jpg"/>
                        
             
           </div>
