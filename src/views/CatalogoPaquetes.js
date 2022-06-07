@@ -83,13 +83,15 @@ function CatalogoPaquetes() {
           </div>
 
           <div className="row" id="listado de paquetes">
-            <Paquete/>
             
+
+            <Paquete nombre="fases de grupo" precio="1500" hotel="5 estrellas" avion="si" micro="si" seguroCovid="si" cantidad="0" evento="aca va lista de eventos?" />
+                       
             
-           
-
-
           </div>
+            
+            
+              
         </div>
       </section>
     </div>
