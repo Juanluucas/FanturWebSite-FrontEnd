@@ -1,0 +1,59 @@
+[
+    {
+    "nombre": "fases de grupo",
+    "precio": 1600,
+    "hotel": "5 estrellas",
+    "avion":"si",
+    "micro":"si",
+    "seguroCovid":"si",
+    "cantidad":50,
+    "evento":"aca va lista de eventos?",
+    "img":"https://static.guiainfantil.com/media/793/c/el-futbol-para-los-ninos-md.jpg"
+    },
+    {
+        "nombre": "Octavos de Final",
+        "precio": 2444,
+        "hotel": "6 estrellas",
+        "avion":"si",
+        "micro":"no",
+        "seguroCovid":"si",
+        "cantidad":19,
+        "evento":"aca va lista de eventos?",
+        "img":"https://upload.wikimedia.org/wikipedia/commons/b/b9/Football_iu_1996.jpg"
+    },
+    {
+        "nombre": "Cuartos",
+        "precio": 1600,
+        "hotel": "5 estrellas",
+        "avion":"si",
+        "micro":"si",
+        "seguroCovid":"si",
+        "cantidad":50,
+        "evento":"aca va lista de eventos?",
+        "img":"https://imagenes.elpais.com/resizer/wU0r61PGvA3eUzBQrjrIsxcLa6Y=/414x311/filters:focal(1954x488:1964x498)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/T5YIGR4XVWFTXBJ6J7OQD4RURE.jpg"
+    },
+    {
+        "nombre": "Octavos de Final",
+        "precio": 2444,
+        "hotel": "6 estrellas",
+        "avion":"si",
+        "micro":"no",
+        "seguroCovid":"si",
+        "cantidad":19,
+        "evento":"aca va lista de eventos?",
+        "img":"https://upload.wikimedia.org/wikipedia/commons/b/b9/Football_iu_1996.jpg"
+    },
+    {
+        "nombre": "Cuartos",
+        "precio": 1600,
+        "hotel": "5 estrellas",
+        "avion":"si",
+        "micro":"si",
+        "seguroCovid":"si",
+        "cantidad":50,
+        "evento":"aca va lista de eventos?",
+        "img":"https://imagenes.elpais.com/resizer/wU0r61PGvA3eUzBQrjrIsxcLa6Y=/414x311/filters:focal(1954x488:1964x498)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/T5YIGR4XVWFTXBJ6J7OQD4RURE.jpg"
+    }
+        
+
+]

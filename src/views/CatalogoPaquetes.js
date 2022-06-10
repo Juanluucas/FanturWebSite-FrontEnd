@@ -1,22 +1,13 @@
 import React from "react";
 import Paquete from "./paquete";
+import paquetesApi from "../paquetes.json"
 
 function CatalogoPaquetes() {
-    let paquete = [
+    let paquete = paquetesApi
 
-                  {
-                      nombre: "fases de grupo",
-                      precio: 1600,
-                      hotel: "5 estrellas",
-                      avion:"si",
-                      micro:"si",
-                      seguroCovid:"si",
-                      cantidad:50,
-                      evento:"aca va lista de eventos?",
-                      img:"https://static.guiainfantil.com/media/793/c/el-futbol-para-los-ninos-md.jpg"
-                  }
+                  
 
-              ]
+              
 
   return (
     <div className="CatalogoPaquetes">

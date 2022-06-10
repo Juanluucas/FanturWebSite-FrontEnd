@@ -62,6 +62,9 @@ margin-right: 40px;
   img, svg {
     vertical-align: middle;
     max-block-size: 350px;
+    max-inline-size: 350px;
+    min-block-size: 350px;
+    border-radius: 15px;
   }
   
 .paquete-titulo {
