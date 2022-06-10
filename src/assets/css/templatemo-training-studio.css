@@ -54,12 +54,12 @@ margin-right: 40px;
 .mv-item-infor {
   margin-left: 40px;
 }
-.paquete-imagen {
+.cuadro-imagen {
   
   text-align:center;
   }
 
-  img, svg {
+  .paquete-imagen {
     vertical-align: middle;
     max-block-size: 350px;
     max-inline-size: 350px;

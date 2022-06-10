@@ -8,8 +8,8 @@ export default function Paquete(props) {
                         
             <div className="movie-item-style-2">
             <br/>
-                <div className="paquete-imagen">
-                <img src={props.img} alt=""/>
+                <div className="cuadro-imagen">
+                <img className="paquete-imagen" src={props.img} alt=""/>
                 </div>
                 <br/>
                     <div className="mv-item-infor">
