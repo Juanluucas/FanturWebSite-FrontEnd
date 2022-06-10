@@ -2,20 +2,21 @@ import React from "react";
 import Paquete from "./paquete";
 
 function CatalogoPaquetes() {
-  //   let paquete = [
+    let paquete = [
 
-  //                 {
-  //                     nombre: "fases de grupo",
-  //                     precio: 1500,
-  //                     hotel: "5 estrellas",
-  //                     avion:"si",
-  //                     micro:"si",
-  //                     seguroCovid:"si",
-  //                     cantidad:50,
-  //                     evento:"aca va lista de eventos?",
-  //                 }
+                  {
+                      nombre: "fases de grupo",
+                      precio: 1600,
+                      hotel: "5 estrellas",
+                      avion:"si",
+                      micro:"si",
+                      seguroCovid:"si",
+                      cantidad:50,
+                      evento:"aca va lista de eventos?",
+                      img:"https://static.guiainfantil.com/media/793/c/el-futbol-para-los-ninos-md.jpg"
+                  }
 
-  //             ]
+              ]
 
   return (
     <div className="CatalogoPaquetes">
@@ -84,8 +85,20 @@ function CatalogoPaquetes() {
 
           <div className="row" id="listado de paquetes">
             
+             {paquete.map(paquete =>
+               <Paquete
+                nombre={paquete.nombre}
+                precio={paquete.precio}
+                hotel={paquete.hotel}
+                avion={paquete.avion}
+                micro={paquete.micro}
+                seguroCovid={paquete.seguroCovid}
+                cantidad={paquete.cantidad}
+                evento={paquete.evento}
+                img={paquete.img}/>
+             )}                     
 
-            <Paquete nombre="fases de grupo" precio="1500" hotel="5 estrellas" avion="si" micro="si" seguroCovid="si" cantidad="0" evento="aca va lista de eventos?" img="https://static.guiainfantil.com/media/793/c/el-futbol-para-los-ninos-md.jpg"/>
+            
 
             
                        
