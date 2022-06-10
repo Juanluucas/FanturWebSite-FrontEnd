@@ -55,7 +55,13 @@ margin-right: 40px;
   margin-left: 40px;
 }
 .paquete-imagen {
+  
   text-align:center;
+  }
+
+  img, svg {
+    vertical-align: middle;
+    max-block-size: 350px;
   }
   
 .paquete-titulo {
