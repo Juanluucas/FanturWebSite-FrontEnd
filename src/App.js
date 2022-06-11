@@ -6,6 +6,7 @@ import Conocenos from "./views/Conocenos";
 import Carro from "./views/Carro";
 import Login from "./views/Login";
 import AddPaquetes from "./views/AddPaquetes";
+import EditarPaquetes from "./views/EditarPaquetes";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/Login" element={<Login/>} />
             <Route path="/carro" element={<Carro/>} />
             <Route path="/AddPaquetes" element={<AddPaquetes/>} />
+            <Route path="/EditarPaquetes" element={<EditarPaquetes/>} />
 
           </Routes>
       </BrowserRouter>
