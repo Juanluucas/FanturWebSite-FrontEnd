@@ -37,6 +37,9 @@ reset
 
 
 */
+
+
+
 .movie-item-style-2 {
   /* background-color: #0e0e0e06; */
   background-color: #EFEFEF;
@@ -150,6 +153,8 @@ p {
 global styles
 --------------------------------------------- 
 */
+
+
 html,
 body {
   background: #fff;
@@ -198,9 +203,16 @@ body {
   margin-bottom: 0px;
 }
 
+
+
+
 .section-heading h2 em {
   font-style: normal;
   color: #ed563b;
+}
+.section-heading h2 ups {
+  font-style: normal;
+  color: #ffffff;
 }
 
 .section-heading img {
@@ -231,7 +243,27 @@ body {
   background-color: #f9735b;
 }
 
+.integrantes {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.integrante-name {
+  color: white;
+}
 
+.integrante-foto {
+  vertical-align: middle;
+  align-items: center;  
+}
+
+.cuadro-imagen2 {
+  
+  text-align:center;
+  }
+
+.conocenos{
+  color: white;
+}
 /* 
 ---------------------------------------------
 header
