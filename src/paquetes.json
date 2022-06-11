@@ -1,14 +1,14 @@
 [
     {
-    "nombre": "Fases de grupo",
-    "precio": 1600,
-    "hotel": "5 estrellas",
-    "avion":"si",
-    "micro":"si",
-    "seguroCovid":"si",
-    "cantidad":50,
-    "evento":"aca va lista de eventos?",
-    "img":"https://static.guiainfantil.com/media/793/c/el-futbol-para-los-ninos-md.jpg"
+        "nombre": "Fases de grupo",
+        "precio": 1600,
+        "hotel": "5 estrellas",
+        "avion":"si",
+        "micro":"si",
+        "seguroCovid":"si",
+        "cantidad":50,
+        "evento":"aca va lista de eventos?",
+        "img":"https://static.guiainfantil.com/media/793/c/el-futbol-para-los-ninos-md.jpg"
     },
     {
         "nombre": "Octavos de Final",

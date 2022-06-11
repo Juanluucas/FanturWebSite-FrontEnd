@@ -1,10 +1,8 @@
 import React from "react";
 import Paquete from "./paquete";
 import paquetesApi from "../paquetes.json"
-import AddPaquetes from "./AddPaquetes";
 
-
-function CatalogoPaquetes() {
+function AddPaquetes() {
     let paquete = paquetesApi
 
                   
@@ -65,12 +63,11 @@ function CatalogoPaquetes() {
             <div className="col-lg-6 offset-lg-3">
               <div className="section-heading">
                 <h2>
-                  Paquetes de <em>Viaje</em>
+                  AÑADIR PAQUETES DE  <em>VIAJE</em>
                 </h2>
                 <img src={require("../assets/images/line-dec.png").default} alt="" />
                 <p>
-                  Ofrecemos los mejores paquetes de viajes para que no tengas
-                  que preocuparte de nada.
+                  Por favor completar todos los campos, compruebe que la url de la imagen sea pública 
                 </p>
               </div>
             </div>
@@ -78,18 +75,34 @@ function CatalogoPaquetes() {
 
           <div className="row" id="listado de paquetes">
             
-             {paquete.map(paquete =>
-               <Paquete
-                nombre={paquete.nombre}
-                precio={paquete.precio}
-                hotel={paquete.hotel}
-                avion={paquete.avion}
-                micro={paquete.micro}
-                seguroCovid={paquete.seguroCovid}
-                cantidad={paquete.cantidad}
-                evento={paquete.evento}
-                img={paquete.img}/>
-             )}                     
+          <div className="col-lg-8" id="paquete1">
+                        
+                        <div className="movie-item-style-2">
+                        <br/>
+                            <div className="cuadro-imagen">
+                            <p className="rate"><i className="ion-android-star"></i><span>img:</span> url imagen</p><br/>
+                            </div>
+                            <br/>
+                                <div className="mv-item-infor"><br/>
+                                    <h6><a href="moviesingle.html" className="paquete-titulo">aca va nombre</a></h6>
+                                    <br/><br/>
+                                    <p className="rate"><i className="ion-android-star"></i><span>Precio:</span> $ aca va precio</p><br/>
+                                    <p className="describe">Hotel: aca va hotel </p><br/>
+                                    <p className="run-time"> Avion: aca va avion </p><br/>
+                                    <p>Micro: aca va micro</p><br/>
+                                    <p>SeguroCovid: aca va seguro covid</p><br/>
+                                    <p>Cantidad: aca va cantidad</p><br/>
+                                    <p>Eventos: aca va eventos </p>
+                                    <br/>
+                                    <li className="main-button paquete-boton">
+                                        <a href="/AddPaquetes">AÑADIR PAQUETE</a>
+                                    </li>
+                                    <br/>
+                                               
+                                </div>
+                        </div>
+                    
+                    </div>                  
 
             
 
@@ -97,41 +110,13 @@ function CatalogoPaquetes() {
                        
             
           </div>
-          
-          <br/>
-
-          
-
-          <li className="main-button paquete-boton">
-            <a href="/AddPaquetes">+ AÑADIR PAQUETE</a>
-          </li>
-
-         <br/>
-
-
-        </div>
-
-
-      </section>
             
-      <footer>
-              <div className="container">
-                  <div className="row">
-                      <div className="col-lg-12">
-                          <p>Copyright &copy; 2020 Training Studio
-                          
-                          - Designed by <a rel="nofollow" href="https://templatemo.com" className="tm-text-link" target="_parent">TemplateMo</a></p>
-                          
-                          {/* <!-- You shall support us a little via PayPal to info@templatemo.com --> */}
-                          
-                      </div>
-                  </div>
-              </div>
-          </footer>
-
-
+            
+              
+        </div>
+      </section>
     </div>
   );
 }
 
-export default CatalogoPaquetes;
+export default AddPaquetes;
