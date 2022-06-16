@@ -1,6 +1,7 @@
 import React from "react";
 import Paquete from "./paquete";
 import paquetesApi from "../paquetes.json"
+import PostForm from "./PostForm";
 
 function AddPaquetes() {
     let paquete = paquetesApi
@@ -79,25 +80,14 @@ function AddPaquetes() {
                         
                         <div className="movie-item-style-2">
                         <br/>
-                            <div className="cuadro-imagen">
-                            <p className="rate"><i className="ion-android-star"></i><span>img:</span> url imagen</p><br/>
-                            </div>
+                            
                             <br/>
                                 <div className="mv-item-infor"><br/>
-                                    <h6><a href="moviesingle.html" className="paquete-titulo">aca va nombre</a></h6>
-                                    <br/><br/>
-                                    <p className="rate"><i className="ion-android-star"></i><span>Precio:</span> $ aca va precio</p><br/>
-                                    <p className="describe">Hotel: aca va hotel </p><br/>
-                                    <p className="run-time"> Avion: aca va avion </p><br/>
-                                    <p>Micro: aca va micro</p><br/>
-                                    <p>SeguroCovid: aca va seguro covid</p><br/>
-                                    <p>Cantidad: aca va cantidad</p><br/>
-                                    <p>Eventos: aca va eventos </p>
-                                    <br/>
-                                    <li className="main-button paquete-boton">
-                                        <a href="/AddPaquetes">AÑADIR PAQUETE</a>
-                                    </li>
-                                    <br/>
+                                  
+                                 <PostForm />
+
+
+                                  <br/>
                                                
                                 </div>
                         </div>

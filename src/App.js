@@ -7,6 +7,7 @@ import Carro from "./views/Carro";
 import Login from "./views/Login";
 import AddPaquetes from "./views/AddPaquetes";
 import EditarPaquetes from "./views/EditarPaquetes";
+import PostForm from "./views/PostForm";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/carro" element={<Carro/>} />
             <Route path="/AddPaquetes" element={<AddPaquetes/>} />
             <Route path="/EditarPaquetes" element={<EditarPaquetes/>} />
+            <Route path="/PostForm" element={<PostForm/>} />
 
           </Routes>
       </BrowserRouter>
