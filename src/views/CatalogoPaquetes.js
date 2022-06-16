@@ -5,11 +5,11 @@ import AddPaquetes from "./AddPaquetes";
 
 
 function CatalogoPaquetes() {
-    let paquete = paquetesApi
+  let paquete = paquetesApi
 
-                  
 
-              
+
+
 
   return (
     <div className="CatalogoPaquetes">
@@ -77,9 +77,9 @@ function CatalogoPaquetes() {
           </div>
 
           <div className="row" id="listado de paquetes">
-            
-             {paquete.map(paquete =>
-               <Paquete
+
+            {paquete.map(paquete =>
+              <Paquete
                 nombre={paquete.nombre}
                 precio={paquete.precio}
                 hotel={paquete.hotel}
@@ -87,50 +87,51 @@ function CatalogoPaquetes() {
                 micro={paquete.micro}
                 seguroCovid={paquete.seguroCovid}
                 cantidad={paquete.cantidad}
-                evento={paquete.evento}
-                img={paquete.img}/>
-             )}                     
+                descripcion={paquete.descripcion}
+                img={paquete.img} />
+            )}
 
-            
 
-            
-                       
-            
+
+
+
+
           </div>
-          
-          <br/>
 
-          
+          <br />
+
+
 
           <li className="main-button paquete-boton">
             <a href="/AddPaquetes">+ AÑADIR PAQUETE</a>
           </li>
 
-         <br/>
+          <br />
 
 
         </div>
 
 
       </section>
-            
+
       <footer>
-              <div className="container">
-                  <div className="row">
-                      <div className="col-lg-12">
-                          <p>Copyright &copy; 2020 Training Studio
-                          
-                          - Designed by <a rel="nofollow" href="https://templatemo.com" className="tm-text-link" target="_parent">TemplateMo</a></p>
-                          
-                          {/* <!-- You shall support us a little via PayPal to info@templatemo.com --> */}
-                          
-                      </div>
-                  </div>
-              </div>
-          </footer>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <p>Copyright &copy; 2020 Training Studio
+
+                - Designed by <a rel="nofollow" href="https://templatemo.com" className="tm-text-link" target="_parent">TemplateMo</a></p>
+
+              {/* <!-- You shall support us a little via PayPal to info@templatemo.com --> */}
+
+            </div>
+          </div>
+        </div>
+      </footer>
 
 
     </div>
+    
   );
 }
 

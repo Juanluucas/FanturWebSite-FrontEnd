@@ -282,7 +282,7 @@ function Home() {
                             </div>
                             <div className="integrantes" >
 
-                                <div className="Integrante" className="cuadro-imagen2">
+                                <div className="Integrante cuadro-imagen2">
                                     <div >
                                     <img className="integrante-foto" src={require("../assets/images/juanlucas.jpg")} alt="" />
                                     </div>
@@ -293,7 +293,7 @@ function Home() {
 
                                     </div>
                                 </div>
-                                <div className="Integrante" className="cuadro-imagen2">
+                                <div className="Integrante cuadro-imagen2">
                                     <img src={require("../assets/images/guido.jpg")} alt="" />
 
                                     <div className="down-content">
@@ -303,7 +303,7 @@ function Home() {
 
                                     </div>
                                 </div>
-                                <div className="Integrante" className="cuadro-imagen2">
+                                <div className="Integrante cuadro-imagen2">
 
                                     <img src={require("../assets/images/ricardo.jpg")} alt="" />
 
@@ -314,7 +314,7 @@ function Home() {
 
                                     </div>
                                 </div>
-                                <div className="Integrante" className="cuadro-imagen2">
+                                <div className="Integrante cuadro-imagen2">
 
                                     <img src={require("../assets/images/gaston.jpg")} alt="" />
 
@@ -325,7 +325,7 @@ function Home() {
 
                                     </div>
                                 </div>
-                                <div className="Integrante" className="cuadro-imagen2">
+                                <div className="Integrante cuadro-imagen2">
 
                                     <img src={require("../assets/images/rodrigo.jpg")} alt="" />
 

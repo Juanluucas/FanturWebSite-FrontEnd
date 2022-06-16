@@ -15,13 +15,12 @@ export default function Paquete(props) {
                     <div className="mv-item-infor">
                         <h6><a href="moviesingle.html" className="paquete-titulo">{props.nombre}</a></h6>
                         <br/>
-                        <p className="rate"><i className="ion-android-star"></i><span>Precio:</span> ${props.precio}</p>
-                        <p className="describe">Hotel: {props.hotel} </p>
+                        <p>Descripcion: {props.descripcion} </p> <br/>
+                        <p className="describe">Estadia: {props.hotel} </p>
                         <p className="run-time"> Avion: {props.avion} </p>
                         <p>Micro: {props.micro}</p>
-                        <p>SeguroCovid: {props.seguroCovid}</p>
-                        <p>Cantidad: {props.cantidad}</p>
-                        <p>Eventos: {props.evento} </p>
+                        <p>SeguroCovid: {props.seguroCovid}</p>                       
+                        <p className="rate"><i className="ion-android-star"></i><span>Precio:</span> ${props.precio}</p>
                         <br/>
                         <li className="main-button paquete-boton">
                             <a href="/carro">RESERVAR</a>

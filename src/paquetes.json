@@ -7,7 +7,7 @@
         "micro":"si",
         "seguroCovid":"si",
         "cantidad":50,
-        "evento":"aca va lista de eventos?",
+        "descripcion":"aca va lista de descripcions?",
         "img":"https://static.guiainfantil.com/media/793/c/el-futbol-para-los-ninos-md.jpg"
     },
     {
@@ -18,7 +18,7 @@
         "micro":"no",
         "seguroCovid":"si",
         "cantidad":19,
-        "evento":"aca va lista de eventos?",
+        "descripcion":"aca va lista de descripcions?",
         "img":"https://upload.wikimedia.org/wikipedia/commons/b/b9/Football_iu_1996.jpg"
     },
     {
@@ -29,7 +29,7 @@
         "micro":"si",
         "seguroCovid":"si",
         "cantidad":50,
-        "evento":"aca va lista de eventos?",
+        "descripcion":"aca va lista de descripcions?",
         "img":"https://imagenes.elpais.com/resizer/wU0r61PGvA3eUzBQrjrIsxcLa6Y=/414x311/filters:focal(1954x488:1964x498)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/T5YIGR4XVWFTXBJ6J7OQD4RURE.jpg"
     },
     {
@@ -40,7 +40,7 @@
         "micro":"no",
         "seguroCovid":"si",
         "cantidad":19,
-        "evento":"aca va lista de eventos?",
+        "descripcion":"aca va lista de descripcions?",
         "img":"https://upload.wikimedia.org/wikipedia/commons/b/b9/Football_iu_1996.jpg"
     },
     {
@@ -51,7 +51,7 @@
         "micro":"si",
         "seguroCovid":"si",
         "cantidad":50,
-        "evento":"aca va lista de eventos?",
+        "descripcion":"aca va lista de descripcions?",
         "img":"https://imagenes.elpais.com/resizer/wU0r61PGvA3eUzBQrjrIsxcLa6Y=/414x311/filters:focal(1954x488:1964x498)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/T5YIGR4XVWFTXBJ6J7OQD4RURE.jpg"
     }
         
