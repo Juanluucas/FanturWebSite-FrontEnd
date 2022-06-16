@@ -2,7 +2,7 @@ import React from "react";
 function Carro() {
   return (
     <div className="Carro">
-      Carro
+      <h1>Carro</h1>
     </div>
   );
 }
