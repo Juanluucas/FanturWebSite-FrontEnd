@@ -8,6 +8,7 @@ import Login from "./views/Login";
 import AddPaquetes from "./views/AddPaquetes";
 import EditarPaquetes from "./views/EditarPaquetes";
 import PostForm from "./views/PostForm";
+import RegisterForm from "./components/RegisterForm/RegisterForm";
 
 function App() {
   return (
@@ -15,8 +16,6 @@ function App() {
       
       <BrowserRouter>
           <Routes>
-
-           
             <Route path="/" element={<Home/>} />
             <Route path="/CatalogoPaquetes" element={<CatalogoPaquetes/>} />
             <Route path="/Conocenos" element={<Conocenos/>} />
@@ -25,6 +24,7 @@ function App() {
             <Route path="/AddPaquetes" element={<AddPaquetes/>} />
             <Route path="/EditarPaquetes" element={<EditarPaquetes/>} />
             <Route path="/PostForm" element={<PostForm/>} />
+            <Route path="/register" element={<RegisterForm/>} />
 
           </Routes>
       </BrowserRouter>

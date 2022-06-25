@@ -91,11 +91,6 @@ function CatalogoPaquetes() {
                 img={paquete.img} />
             )}
 
-
-
-
-
-
           </div>
 
           <br />
@@ -118,11 +113,9 @@ function CatalogoPaquetes() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <p>Copyright &copy; 2020 Training Studio
+              <p>Copyright &copy; 2022
 
-                - Designed by <a rel="nofollow" href="https://templatemo.com" className="tm-text-link" target="_parent">TemplateMo</a></p>
-
-              {/* <!-- You shall support us a little via PayPal to info@templatemo.com --> */}
+                - Designed by Grupo N°2 Cliente Servidor - UTN</p>
 
             </div>
           </div>

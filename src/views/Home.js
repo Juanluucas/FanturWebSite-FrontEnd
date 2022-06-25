@@ -1,9 +1,10 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/css/templatemo-training-studio.css';
 import '../assets/css/CatalogoPaquetes.css';
 import Video from '../assets/images/video1-2.mp4'
+import Header from "../components/header/";
 
 
 function Home() {
@@ -32,35 +33,7 @@ function Home() {
                 <body>
 
 
-
-
-                    {/* <!-- ***** Header Area Start//NAVBAR ***** --> */}
-                    <header className="header-area header-sticky">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-12">
-                                    <nav className="main-nav">
-                                        {/* <!-- ***** Logo Start ***** --> */}
-                                        <a href="/" className="logo">FAN<em> TUR</em></a>
-                                        {/* <!-- ***** Logo End ***** --> */}
-                                        {/* <!-- ***** Menu Start ***** --> */}
-                                        <ul className="nav">
-                                            <li className="scroll-to-section"><a href="#top" className="active">Home</a></li>
-                                            <li className="scroll-to-section"><a href="#features">Nuestros Servicios</a></li>
-                                            <li className="scroll-to-section"><a href="#our-classes">Fases</a></li>
-                                            <li className="scroll-to-section"><a href="#schedule">Conocenos</a></li>
-                                            <li ><a href="/CatalogoPaquetes">Catalogo Paquetes</a></li>
-                                            <li className="main-button"><a href="/login">Sign Up</a></li>
-                                        </ul>
-                                        {/* <a className='menu-trigger'>
-                                  <span>Menu</span>
-                              </a> */}
-                                        {/* <!-- ***** Menu End ***** --> */}
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </header>
+                    <Header />
 
 
                     {/* <!-- ***** Main Banner Area Start ***** --> */}
