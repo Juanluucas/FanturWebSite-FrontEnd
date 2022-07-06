@@ -97,7 +97,7 @@ class Login extends Component {
                   onChange={this.handleChange}
                 />
                 <br />
-                <button className="btn btn-primary" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
+                <button className="btn" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
               </div>
             </div>
           </div>
