@@ -5,9 +5,9 @@ import AddPaquetes from "./AddPaquetes";
 
 
 function CatalogoPaquetes() {
-  let paquete = paquetesApi
+  let paquetes = paquetesApi
 
-
+  
 
 
 
@@ -78,13 +78,22 @@ function CatalogoPaquetes() {
 
           <div className="row" id="listado de paquetes">
 
-            {paquete.map(paquete =>
+            {paquetes && paquetes.map(paquete =>
               <Paquete
                 name={paquete.name}
                 packagePrice={paquete.packagePrice}
-                //packageServices={paquete.packageServices.service.description}
+                
                 
                 description={paquete.description}
+                packageServices={paquete.packageServices[0].service.description}
+
+                /*paquete.packageServices && paquete.packageServices.map(servicio => {
+                  return(
+                    <div>
+                    {servicio.description}
+                    </div>
+                  )
+                }) */
                 //img={paquete.img} 
                 />
             )}

@@ -1,5 +1,6 @@
 import React from "react"
 
+
 export default function Paquete(props) {
     //aca tenemos que chequear si el usuario es un admin para renderizarle el boton editar
     return (
@@ -19,7 +20,7 @@ export default function Paquete(props) {
                         <p>Descripcion: {props.description} </p> <br/>
                         <p className="rate"><i className="ion-android-star"></i><span>Precio:</span> ${props.packagePrice}</p>
                         
-                        {/*<p className="run-time"> Avion: {props.packageServices.service.description} </p>*/}
+                        {<p className="run-time"> Avion: {props.packageServices} </p>}
                                            
                         
                         <br/>
