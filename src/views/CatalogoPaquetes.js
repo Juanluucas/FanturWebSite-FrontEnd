@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Paquete from "./paquete";
-import paquetesApi from "../paquetes.json"
-import AddPaquetes from "./AddPaquetes";
+import {getPaquetes} from "../service/paquetes.service"
 
 
 function CatalogoPaquetes() {
-  let paquetes = paquetesApi
-  const [paquetes,setPaquetes]= useState([])
+  const [ paquetes ,setPaquetes]= useState([])
+
   useEffect(()=>{
-    
+    getPaquetes().then((res) => {
+      setPaquetes(res);
+      return res
+    }).catch((err) => {
+      console.log(err);
+    })
   },[])
 
 
