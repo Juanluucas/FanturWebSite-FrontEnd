@@ -1,9 +1,10 @@
 import React from "react";
 import Paquete from "./paquete";
 import paquetesApi from "../paquetes.json"
+import PostFormEditarPaquetes from "./PostFormEditarPaquetes";
 
 function EditarPaquetes() {
-    let paquete = paquetesApi
+  let paquete = paquetesApi
 
                   
 
@@ -63,11 +64,11 @@ function EditarPaquetes() {
             <div className="col-lg-6 offset-lg-3">
               <div className="section-heading">
                 <h2>
-                  EDITAR  <em>PAQUETE</em>
+                  EDITAR PAQUETES DE  <em>VIAJE</em>
                 </h2>
                 <img src={require("../assets/images/line-dec.png").default} alt="" />
                 <p>
-                 Edite paquetes ya creados
+                  Por favor completar todos los campos, compruebe que la url de la imagen sea pública 
                 </p>
               </div>
             </div>
@@ -79,25 +80,14 @@ function EditarPaquetes() {
                         
                         <div className="movie-item-style-2">
                         <br/>
-                            <div className="cuadro-imagen">
-                            <p className="rate"><i className="ion-android-star"></i><span>img:</span> url imagen</p><br/>
-                            </div>
+                            
                             <br/>
                                 <div className="mv-item-infor"><br/>
-                                    <h6><a href="moviesingle.html" className="paquete-titulo">aca va nombre</a></h6>
-                                    <br/><br/>
-                                    <p className="rate"><i className="ion-android-star"></i><span>Precio:</span> $ aca va precio</p><br/>
-                                    <p className="describe">Hotel: aca va hotel </p><br/>
-                                    <p className="run-time"> Avion: aca va avion </p><br/>
-                                    <p>Micro: aca va micro</p><br/>
-                                    <p>SeguroCovid: aca va seguro covid</p><br/>
-                                    <p>Cantidad: aca va cantidad</p><br/>
-                                    <p>Eventos: aca va eventos </p>
-                                    <br/>
-                                    <li className="main-button paquete-boton">
-                                        <a href="/AddPaquetes">AÑADIR PAQUETE</a>
-                                    </li>
-                                    <br/>
+                                  
+                                 <PostFormEditarPaquetes />
+
+
+                                  <br/>
                                                
                                 </div>
                         </div>

@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import Axios from 'axios'
 import './PostForm.css';
 
-function PostForm() {
-    const url = "https://localhost:7190/api/Package/"
+function PostFormEditarPaquetes() {
+    var url = "https://localhost:7190/api/Package/"
     const [data, setData] = useState({
+        id: "",
         name: "",
         description: "",
         packagePrice: "",
@@ -15,7 +16,8 @@ function PostForm() {
 
     function submit(e){
         e.preventDefault();
-        Axios.post(url,{
+        Axios.put(url+data.id,{
+            id: parseInt(data.id),
             name: data.name,
             description: data.description,
             packagePrice: parseFloat(data.packagePrice),
@@ -27,10 +29,11 @@ function PostForm() {
                 console.log(res.data)
             })
     }
-
+    
     function handle(e){
         const newdata={...data}
         newdata[e.target.id] = e.target.value
+        
         setData(newdata)
         console.log(newdata)
     }
@@ -39,6 +42,8 @@ function PostForm() {
         <div className='formulario'>
             <form onSubmit={(e)=> submit(e)}>
                 <ol>
+                    <ul><input onChange={(e)=>handle(e)} id="id" value={data.ide}placeholder="id" type="number"></input></ul>
+                    <br/>
                     <ul><input onChange={(e)=>handle(e)} id="name" value={data.name} placeholder="name" type="text"></input></ul>
                     <br/>
                     <ul><input onChange={(e)=>handle(e)} id="description" value={data.description} placeholder="description" type="text"></input></ul>
@@ -62,4 +67,5 @@ function PostForm() {
 
 
 
-export default PostForm
+
+export default PostFormEditarPaquetes;

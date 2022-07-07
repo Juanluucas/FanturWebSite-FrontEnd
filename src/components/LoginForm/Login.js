@@ -118,7 +118,7 @@ class Login extends Component {
                   name="username"
                   onChange={this.handleChange}
                 />
-                <label htmlFor="correo" className="label-login">Correo Electronico:</label>
+                <label htmlFor="usuario" className="label-login">Usuario:</label>
             </div>
                 <br />
             <div className="input-container-login">    
