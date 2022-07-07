@@ -19,8 +19,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/CatalogoPaquetes" element={<CatalogoPaquetes/>} />
             <Route path="/Conocenos" element={<Conocenos/>} />
-            <Route path="/Login" element={<Login/>} />
-           
+            <Route path="/Login" element={<Login/>} />      
             <Route path="/AddPaquetes" element={<AddPaquetes/>} />
             <Route path="/EditarPaquetes" element={<EditarPaquetes/>} />
             <Route path="/PostForm" element={<PostForm/>} />

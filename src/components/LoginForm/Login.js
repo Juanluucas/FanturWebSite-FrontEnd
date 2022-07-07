@@ -3,21 +3,20 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import md5 from 'md5';
-import {  styles } from "./loginFormUtils"
 import { Link } from "react-router-dom";
 import "./loginForm.css"
 import Cookies from 'universal-cookie';
 import Header from '../header';
 
-const baseUrl="http://localhost:3001/usuarios";
+const baseUrl="http://localhost:3001/usuarios"; // Este es el backend al cual nos comunicamos
 const cookies = new Cookies();
 
 
 class Login extends Component {
     state={
         form:{
-            username: '',
-            password: ''
+          UserName: '',
+          PassWord: ''
         }
     }
 
@@ -34,25 +33,32 @@ class Login extends Component {
 
     iniciarSesion=async()=>{
         
+        /*
         // Valido que sea un correo electronico
         var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
         var esValido = expReg.test(this.state.form.username);
+        */
+        var esValido = true;      // Borrar esto si, y descomentar lo de arriba para volver a controlar un EMAIL
         if (esValido === true) {
-            // aca me empiezo a comunicar con la base de datos 
-            await axios.get(baseUrl, {params: {username: this.state.form.username, password: md5(this.state.form.password)}})
-        .then(response=>{
+          // aca me empiezo a comunicar con la base de datos
+        
+          await axios.get(baseUrl, {params: {UserName: this.state.form.UserName, PassWord: md5(this.state.form.PassWord)} })
+          .then(response=>{
             return response.data;
-        })
-        .then(response=>{
+          })
+          .then(response=>{
             if(response.length>0){
                 var respuesta=response[0];
                 cookies.set('id', respuesta.id, {path: "/"});
-                cookies.set('apellido_paterno', respuesta.apellido_paterno, {path: "/"});
-                cookies.set('apellido_materno', respuesta.apellido_materno, {path: "/"});
-                cookies.set('nombre', respuesta.nombre, {path: "/"});
-                cookies.set('username', respuesta.username, {path: "/"});
-                alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido_paterno}`);
-                window.location.href="./menu";
+                cookies.set('UserName', respuesta.UserName, {path: "/"});
+                cookies.set('Role', respuesta.Role, {path: "/"});
+                cookies.set('PhoneNumber', respuesta.phoneNumber, {path: "/"});
+                cookies.set('FirstName', respuesta.FirstName, {path: "/"});
+                cookies.set('LastName', respuesta.LastName, {path: "/"});
+                cookies.set('Email', respuesta.Email, {path: "/"});
+                console.log("qweqweqweqw");
+                alert(`Bienvenido ${respuesta.UserName}`);
+                window.location.href="/";
             }else{
                 alert('El usuario o la contraseña no son correctos');
             }
@@ -62,92 +68,69 @@ class Login extends Component {
         })
         } 
         else {
-            alert('Debe ingresar un correo electronico');
+          alert('Debe ingresar un correo electronico');
         }
         
 
     }
-
+    /*
+      // ACA LO MANDO A LA PAGINA DE YA LOGUEADOS
     componentDidMount() {
-        if(cookies.get('username')){
-            window.location.href="./menu";
+        if(cookies.get('UserName')){
+          
+            window.location.href="./menu";  
+            cookies.remove('UserName', {path: "/"});
         }
     }
-    
-    /*
-    <div className="containerPrincipal">
-            <div className="containerSecundario">
-              <div className="form-group">
-                <label>Usuario: </label>
-                <br />
-                <input
-                  type="text"
-                  className="form-control"
-                  name="username"
-                  onChange={this.handleChange}
-                />
-                <br />
-                <label>Contraseña: </label>
-                <br />
-                <input
-                  type="password"
-                  className="form-control"
-                  name="password"
-                  onChange={this.handleChange}
-                />
-                <br />
-                <button className="btn" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
-              </div>
-            </div>
-          </div>
     */
+    
 
     render() {
-        return (
-          <> 
-          <Header/>
-          <div className="principalLogin">
-            
-            <form className="formLogin" >     
+      return (
+        <>
+        <Header/>
+        <div className="principalLogin">
+          
+          <div className="formLogin" >     
 
-            <div className="input-container-login"> 
-                <br />
-                <input
-                  type="text"
-                  className="input-login"
-                  name="username"
-                  onChange={this.handleChange}
-                />
-                <label htmlFor="usuario" className="label-login">Usuario:</label>
-            </div>
-                <br />
-            <div className="input-container-login">    
-              <div className="unc-password">
-                <br />
-                <input
-                  type="password"
-                  className="input-login"
-                  name="password"
-                  onChange={this.handleChange}
-                />
-                <br />
-                
-                <label htmlFor="contraseña" className="label-login">Contraseña:</label>
-              </div>  
-            </div>
-
-            <div className="unc-submit">
-            <button className="btn" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
-          <span className="plc-span-form">
-            ¿No tienes una cuenta? 
-            <Link className="anchor-link" to={"/register"}> Registrarse</Link>
-          </span>
-        </div>
+          <div className="input-container-login"> 
+              <br />
+              <input
+                type="text"
+                className="input-login"
+                name="UserName"
+                onChange={this.handleChange}
+              />
+              <label htmlFor="usuario" className="label-login">Usuario:</label>
+          </div>
+              <br />
+          <div className="input-container-login">    
+            <div className="unc-password">
+              <br />
+              <input
+                type="password"
+                className="input-login"
+                name="PassWord"
+                onChange={this.handleChange}
+              />
+              <br />
               
-            </form>  
-          </div>     
-          </>
-        );
+              <label htmlFor="contraseña" className="label-login">Contraseña:</label>
+            </div>  
+          </div>
+
+          <div className="unc-submit">
+          <button className="btn btn-primary" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
+        <span className="plc-span-form">
+          ¿No tienes una cuenta? 
+          <Link className="anchor-link" to={"/register"}> Registrarse</Link>
+        </span>
+      </div>
+            
+          </div>  
+        </div>
+        </>     
+            );
     }
 }
 
