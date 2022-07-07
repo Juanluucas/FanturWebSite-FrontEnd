@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Paquete from "./paquete";
 import paquetesApi from "../paquetes.json"
 import AddPaquetes from "./AddPaquetes";
@@ -6,8 +6,10 @@ import AddPaquetes from "./AddPaquetes";
 
 function CatalogoPaquetes() {
   let paquetes = paquetesApi
-
-  
+  const [paquetes,setPaquetes]= useState([])
+  useEffect(()=>{
+    
+  },[])
 
 
 
