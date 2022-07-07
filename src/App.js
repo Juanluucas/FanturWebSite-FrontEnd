@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import CatalogoPaquetes from "./views/CatalogoPaquetes";
 import Home from "./views/Home";
 import Conocenos from "./views/Conocenos";
-import Carro from "./views/Carro";
+import Carroform from "./components/Carro/carroform";
 import Login from "./components/LoginForm/Login";
 import AddPaquetes from "./views/AddPaquetes";
 import EditarPaquetes from "./views/EditarPaquetes";
@@ -20,11 +20,12 @@ function App() {
             <Route path="/CatalogoPaquetes" element={<CatalogoPaquetes/>} />
             <Route path="/Conocenos" element={<Conocenos/>} />
             <Route path="/Login" element={<Login/>} />
-            <Route path="/carro" element={<Carro/>} />
+           
             <Route path="/AddPaquetes" element={<AddPaquetes/>} />
             <Route path="/EditarPaquetes" element={<EditarPaquetes/>} />
             <Route path="/PostForm" element={<PostForm/>} />
             <Route path="/register" element={<RegisterForm/>} />
+            <Route path="/carroform" element={<Carroform/>} />
 
           </Routes>
       </BrowserRouter>
