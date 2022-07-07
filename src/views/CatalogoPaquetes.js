@@ -80,15 +80,13 @@ function CatalogoPaquetes() {
 
             {paquete.map(paquete =>
               <Paquete
-                nombre={paquete.nombre}
-                precio={paquete.precio}
-                hotel={paquete.hotel}
-                avion={paquete.avion}
-                micro={paquete.micro}
-                seguroCovid={paquete.seguroCovid}
-                cantidad={paquete.cantidad}
-                descripcion={paquete.descripcion}
-                img={paquete.img} />
+                name={paquete.name}
+                packagePrice={paquete.packagePrice}
+                //packageServices={paquete.packageServices.service.description}
+                
+                description={paquete.description}
+                //img={paquete.img} 
+                />
             )}
 
           </div>
