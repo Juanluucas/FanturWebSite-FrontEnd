@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 import md5 from 'md5';
+import {  styles } from "./loginFormUtils"
+import { Link } from "react-router-dom";
+import "./loginForm.css"
 import Cookies from 'universal-cookie';
-import Header from '../components/header';
+import Header from '../header';
 
 const baseUrl="http://localhost:3001/usuarios";
 const cookies = new Cookies();
@@ -71,12 +74,8 @@ class Login extends Component {
         }
     }
     
-
-    render() {
-        return (
-          <> 
-          <Header/>
-            <div className="containerPrincipal">
+    /*
+    <div className="containerPrincipal">
             <div className="containerSecundario">
               <div className="form-group">
                 <label>Usuario: </label>
@@ -101,6 +100,52 @@ class Login extends Component {
               </div>
             </div>
           </div>
+    */
+
+    render() {
+        return (
+          <> 
+          <Header/>
+          <div className="principalLogin">
+            
+            <form className="formLogin" >     
+
+            <div className="input-container-login"> 
+                <br />
+                <input
+                  type="text"
+                  className="input-login"
+                  name="username"
+                  onChange={this.handleChange}
+                />
+                <label htmlFor="correo" className="label-login">Correo Electronico:</label>
+            </div>
+                <br />
+            <div className="input-container-login">    
+              <div className="unc-password">
+                <br />
+                <input
+                  type="password"
+                  className="input-login"
+                  name="password"
+                  onChange={this.handleChange}
+                />
+                <br />
+                
+                <label htmlFor="contraseña" className="label-login">Contraseña:</label>
+              </div>  
+            </div>
+
+            <div className="unc-submit">
+            <button className="btn" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
+          <span className="plc-span-form">
+            ¿No tienes una cuenta? 
+            <Link className="anchor-link" to={"/register"}> Registrarse</Link>
+          </span>
+        </div>
+              
+            </form>  
+          </div>     
           </>
         );
     }

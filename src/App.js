@@ -4,7 +4,7 @@ import CatalogoPaquetes from "./views/CatalogoPaquetes";
 import Home from "./views/Home";
 import Conocenos from "./views/Conocenos";
 import Carro from "./views/Carro";
-import Login from "./views/Login";
+import Login from "./components/LoginForm/Login";
 import AddPaquetes from "./views/AddPaquetes";
 import EditarPaquetes from "./views/EditarPaquetes";
 import PostForm from "./views/PostForm";
