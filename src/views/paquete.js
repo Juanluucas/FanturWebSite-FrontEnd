@@ -1,7 +1,8 @@
 import React from "react"
-
+import { Link } from "react-router-dom";
 
 export default function Paquete(props) {
+    let user;
     //aca tenemos que chequear si el usuario es un admin para renderizarle el boton editar
     return (
        
@@ -25,13 +26,15 @@ export default function Paquete(props) {
                         
                         <br/>
                         <li className="main-button paquete-boton">
-                            <a href="/carroform">COMPRAR</a>
+                            <Link to={`/carroform/${props.id}`}>COMPRAR</Link>
                         </li>
                         <br/>
-                        {/*aca hay que poner un if para que dibuje el boton editar */}
-                        <li className="main-button paquete-boton">
+                        {/* {user.Role==="Admin"?<li className="main-button paquete-boton">
                             <a href="/editarpaquetes">EDITAR</a>
-                        </li>
+                        </li>:<li className="main-button paquete-boton">
+                            <a href="/carroform">COMPRAR</a>
+                        </li>} */}
+                        
                         <br/>
                     
                                    

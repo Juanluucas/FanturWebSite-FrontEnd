@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Paquete from "./paquete";
 import {getPaquetes} from "../service/paquetes.service"
+import Header from "../components/header";
 
 
 function CatalogoPaquetes() {
@@ -8,6 +9,7 @@ function CatalogoPaquetes() {
 
   useEffect(()=>{
     getPaquetes().then((res) => {
+      console.log(res)
       setPaquetes(res);
       return res
     }).catch((err) => {
@@ -19,50 +21,8 @@ function CatalogoPaquetes() {
 
   return (
     <div className="CatalogoPaquetes">
-      {/* <!-- ***** Header Area Start//NAVBAR ***** --> */}
-      <header className="header-area header-sticky header background-header">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <nav className="main-nav">
-                {/* <!-- ***** Logo Start ***** --> */}
-                <a href="/" className="logo">
-                  FAN<em> TUR</em>
-                </a>
-
-                {/* <!-- ***** Menu Start ***** --> */}
-                <ul className="nav">
-                  <li className="scroll-to-section">
-                    <a href="/">Home</a>
-                  </li>
-                  <li className="scroll-to-section">
-                    <a href="/#features">Nuestros Servicios</a>
-                  </li>
-                  <li className="scroll-to-section">
-                    <a href="/#our-classes">Fases</a>
-                  </li>
-                  <li className="scroll-to-section">
-                    <a href="/#schedule">Conocenos</a>
-                  </li>
-                  <li>
-                    <a href="/CatalogoPaquetes" className="active">
-                      Catalogo Paquetes
-                    </a>
-                  </li>
-                  <li className="main-button">
-                    <a href="/login">Sign Up</a>
-                  </li>
-                </ul>
-                {/* <a className='menu-trigger'>
-                                  <span>Menu</span>
-                              </a> */}
-                {/* <!-- ***** Menu End ***** --> */}
-              </nav>
-            </div>
-          </div>
-        </div>
-      </header>
-
+       <Header />
+      <br/><br/>
       {/* <!-- ***** no navbar ***** --> */}
       <section className="section" id="trainers">
         <div className="container">
@@ -86,6 +46,7 @@ function CatalogoPaquetes() {
 
             {paquetes && paquetes.map(paquete =>
               <Paquete
+                id={paquete.id}
                 name={paquete.name}
                 packagePrice={paquete.packagePrice}
                 

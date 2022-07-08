@@ -171,7 +171,7 @@ function Home() {
                                     <div className="section-heading">
                                         <h2>Las fases del<em> Mundial</em></h2>
                                         <img src={require("../assets/images/line-dec.png")} alt="" />
-                                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
+                                        <p>A continuacion se presentan las distintas fases del mundial de futbol de Qatar 2022.</p>
                                     </div>
                                 </div>
                             </div>
@@ -190,7 +190,7 @@ function Home() {
                                     <section className='tabs-content'>
                                         <article id='tabs-1'>
                                             <h4>Fases de grupos</h4>
-                                            <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
+                                            <p>La fase de grupos se disputa entre el 21 de noviembre y el 2 de diciembre de 2022 y en ese periodo habrá partidos todos los días. Cada día se disputarán cuatro partidos, dos de cada grupo, en cuatro horarios diferentes que permitirán ver todos los partidos.</p>
                                             <div className="main-button">
                                                 <a href="/#">paquetes filtrados?</a>
                                             </div>
@@ -199,7 +199,7 @@ function Home() {
                                         </article>
                                         <article id='tabs-2'>
                                             <h4>Octavos de final</h4>
-                                            <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
+                                            <p>Los octavos de final se disputarán el 3, 4, 5 y 6 de diciembre, en los que se enfrentarán los primeros de grupo con los segundos de grupo sin que sea posible que se enfrenten equipos que ya habían competido entre sí en la fase de grupos.</p>
                                             <div className="main-button">
                                                 <a href="/#">paquetes filtrados?</a>
                                             </div>
@@ -208,7 +208,7 @@ function Home() {
                                         </article>
                                         <article id='tabs-3'>
                                             <h4>Cuartos de final</h4>
-                                            <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
+                                            <p>Sólo 8 de los equipos participantes del Mundial de Qatar 2022 podrán estar en los cuartos de final del torneo. Los emparejamientos de los 8 grupos se sortean el día 1 de abril y determinarán los cruces de las eliminatorias de octavos de final y los 8 ganadores se enfrentarán entre sí en los cuartos de final.</p>
                                             <div className="main-button">
                                                 <a href="/#">paquetes filtrados?</a>
                                             </div>
@@ -217,7 +217,7 @@ function Home() {
                                         </article>
                                         <article id='tabs-4'>
                                             <h4>Semifinal</h4>
-                                            <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
+                                            <p>Sólo los 4 mejores equipos participantes del Mundial de Qatar 2022 podrán estar en las semis del torneo.</p>
                                             <div className="main-button">
                                                 <a href="/#">paquetes filtrados?</a>
                                             </div>
@@ -226,7 +226,7 @@ function Home() {
                                         </article>
                                         <article id='tabs-5'>
                                             <h4>Final</h4>
-                                            <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
+                                            <p>En este partido se enfrentan los 2 mejores equipos del torneo para saber quien se alzara con la tan preciada Copa del Mundo</p>
                                             <div className="main-button">
                                                 <a href="/#">paquetes filtrados?</a>
                                             </div>
@@ -321,11 +321,9 @@ function Home() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <p>Copyright &copy; 2020 Training Studio
+                                    <p>Copyright &copy; 2022 Grupo 2 Cliente Servidor UTN Frre</p>
 
-                                        - Designed by <a rel="nofollow" href="https://templatemo.com" className="tm-text-link" target="_parent">TemplateMo</a></p>
-
-                                    {/* <!-- You shall support us a little via PayPal to info@templatemo.com --> */}
+                                    
 
                                 </div>
                             </div>
