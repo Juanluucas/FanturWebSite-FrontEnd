@@ -29,11 +29,12 @@ export default function RegisterForm() {
           loginUser(form).then((res) => {
             if (res.status === 200) {
               let user = {
-                id: res.data.id,
-                name: res.data.name,
+                id: res.data.userId,
+                name: res.data.firstName,
                 lastName: res.data.lastName,
                 email: res.data.email,
-                tokenJwt: res.data.token
+                tokenJwt: res.data.token,
+                role: res.data.role
               }
               localStorage.setItem("user", JSON.stringify(user));
               setIsLogged(true);
