@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/css/templatemo-training-studio.css';
-import '../assets/css/CatalogoPaquetes.css';
+
 import Video from '../assets/images/video1-2.mp4'
 import Header from "../components/header/";
 
