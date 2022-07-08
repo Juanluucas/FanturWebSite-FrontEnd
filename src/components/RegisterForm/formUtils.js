@@ -1,9 +1,5 @@
 export const initialForm = {
-  name: "",
-  lastName: "",
-  email: "",
-  password: "",
-  confirmPassword: "",
+  emailSubscription: false
 };
 
 export let styles = {
@@ -22,7 +18,7 @@ export const validationsForm = (form) => {
   let regexEmail = /^(\w+[/./-]?){1,}@[a-zA-Z]+[/.]\w{2,}$/;
   let regexPassword = /^.{6,}$/;
 
-  if (!form.name.trim()) {
+  if (!form.firstName.trim()) {
     errors.name = "Campo requerido";
   } else if (!regexName.test(form.name.trim())) {
     errors.name = "Caracteres no válidos";
@@ -39,6 +35,13 @@ export const validationsForm = (form) => {
   } else if (!regexEmail.test(form.email.trim())) {
     errors.email = "El formato es incorrecto";
   }
+
+  if (!form.userName.trim()) {
+    errors.email = "Campo requerido";
+  } else if (!regexName.test(form.userName.trim())) {
+    errors.email = "El formato es incorrecto";
+  }
+
 
   if (!form.password.trim()) {
     errors.password = "Campo requerido";

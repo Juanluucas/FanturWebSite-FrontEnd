@@ -9,7 +9,7 @@ import { postUser, loginUser } from "../../service/user.service";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import Header from "../header";
-import CheckBox from "../checkBox/CheckBox";
+import "../checkBox/Checkbox.css"
 
 export default function RegisterForm() {
   const [isLogged, setIsLogged] = useState(false);
@@ -22,6 +22,7 @@ export default function RegisterForm() {
   );
 
   const handlePost = () => {
+    console.log(form);
     if (noErrors(errors)) {
       postUser(form).then((res) => {
         if (res.status != 201) {
@@ -83,8 +84,8 @@ export default function RegisterForm() {
           <input
             className="gv-input-register"
             type="text"
-            name="name"
-            id="name"
+            name="firstName"
+            id="firstName"
             placeholder=" "
             value={form.firstName}
             onBlur={handleBlur}
@@ -100,7 +101,7 @@ export default function RegisterForm() {
             name="lastName"
             id="lastname"
             placeholder=" "
-            value={form.lastname}
+            value={form.lastName}
             onBlur={handleBlur}
             onChange={handleChange}
           />
@@ -138,9 +139,9 @@ export default function RegisterForm() {
         <div className="gv-input-container-register">
           <input
             className="gv-input-register"
-            type="text"
-            name="phone"
-            id="phone"
+            type="number"
+            name="phoneNumber"
+            id="phoneNumber"
             placeholder=" "
             value={form.phoneNumber}
             onBlur={handleBlur}
@@ -187,7 +188,7 @@ export default function RegisterForm() {
           </div>
         <div className='gv-checkbox-container'>
             <label className='gv-checkbox-label'>
-                <input type="checkbox" className='gv-checkbox-input' value={form.emailSubscription} />
+                <input type="checkbox" className='gv-checkbox-input' name="emailSubscription" value={form.emailSubscription} />
                 <span className='gv-checkbox-span'></span>
             </label>
             <p>Desea recibir publicidad</p>

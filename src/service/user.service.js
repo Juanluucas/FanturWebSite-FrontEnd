@@ -8,7 +8,7 @@ export const postUser = async (data) => {
     firstName: data.name,
     lastName: data.lastName,
     email: data.email,
-    password: data.password,
+    passWord: data.password,
     userName: data.userName,
     phoneNumber: data.phoneNumber,
     emailSubscription: data.emailSubscription
