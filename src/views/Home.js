@@ -321,11 +321,9 @@ function Home() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
-                                    <p>Copyright &copy; 2020 Training Studio
+                                    <p>Copyright &copy; 2022 Grupo 2 Cliente Servidor UTN Frre</p>
 
-                                        - Designed by <a rel="nofollow" href="https://templatemo.com" className="tm-text-link" target="_parent">TemplateMo</a></p>
-
-                                    {/* <!-- You shall support us a little via PayPal to info@templatemo.com --> */}
+                                    
 
                                 </div>
                             </div>
