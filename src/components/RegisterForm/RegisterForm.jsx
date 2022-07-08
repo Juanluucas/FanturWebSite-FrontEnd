@@ -9,11 +9,12 @@ import { postUser, loginUser } from "../../service/user.service";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import Header from "../header";
+import CheckBox from "../checkBox/CheckBox";
 
 export default function RegisterForm() {
   const [isLogged, setIsLogged] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showPasswordConfirmation, setShowPasswordConfirmation] = useState(false);
   const navigate = useNavigate();
   const { form, errors, handleChange, handleBlur, handleSubmit } = useForm(
     initialForm,
@@ -60,16 +61,16 @@ export default function RegisterForm() {
     setShowPassword(!showPassword);
   }
 
-  const handleClickShowConfirmPassword = () => {
-    setShowConfirmPassword(!showConfirmPassword);
-  }
-
   const noErrors = (errors) => {
     let resp = false;
     if (Object.keys(errors).length === 0) {
       resp = true;
     }
     return resp
+  }
+
+  const handleClickShowPasswordConfirmation = () => {
+    setShowPasswordConfirmation(!showPasswordConfirmation);
   }
 
   return (
@@ -85,12 +86,12 @@ export default function RegisterForm() {
             name="name"
             id="name"
             placeholder=" "
-            value={form.name}
+            value={form.firstName}
             onBlur={handleBlur}
             onChange={handleChange}
           />
           <label htmlFor="name" className="gv-label-register">Nombre</label>
-          {errors.name && <p style={styles}>{errors.name}</p>}
+          {errors.firstName && <p style={styles}>{errors.firstName}</p>}
         </div>
         <div className="gv-input-container-register">
           <input
@@ -109,6 +110,20 @@ export default function RegisterForm() {
         <div className="gv-input-container-register">
           <input
             className="gv-input-register"
+            type="text"
+            name="username"
+            id="username"
+            placeholder=" "
+            value={form.username}
+            onBlur={handleBlur}
+            onChange={handleChange}
+          />
+          <label htmlFor="name" className="gv-label-register">Nombre de usuario</label>
+          {errors.username && <p style={styles}>{errors.username}</p>}
+        </div>
+        <div className="gv-input-container-register">
+          <input
+            className="gv-input-register"
             type="email"
             name="email"
             id="email"
@@ -119,6 +134,20 @@ export default function RegisterForm() {
           />
           <label htmlFor="email" className="gv-label-register">Correo electrónico</label>
           {errors.email && <p style={styles}>{errors.email}</p>}
+        </div>
+        <div className="gv-input-container-register">
+          <input
+            className="gv-input-register"
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder=" "
+            value={form.phoneNumber}
+            onBlur={handleBlur}
+            onChange={handleChange}
+          />
+          <label htmlFor="phone" className="gv-label-register">Número de telefono</label>
+          {errors.phoneNumber && <p style={styles}>{errors.phoneNumber}</p>}
         </div>
         <div className="gv-input-container-register">
           <div className="unc-password">
@@ -138,30 +167,36 @@ export default function RegisterForm() {
           {errors.password && <p style={styles}>{errors.password}</p>}
         </div>
         <div className="gv-input-container-register">
-          <div className="unc-password">
-            <input
-              className="gv-input-register"
-              type={showConfirmPassword ? "text" : "password"}
-              name="confirmPassword"
-              id="confirmPassword"
-              placeholder=" "
-              value={form.confirmPassword}
-              onBlur={handleBlur}
-              onChange={handleChange}
-            />
-            <label htmlFor="confirmPassword" className="gv-label-register">Confirmar contraseña</label>
-            {showConfirmPassword ? <FontAwesomeIcon className="faEyeSlashIcon" icon={faEyeSlash} onClick={handleClickShowConfirmPassword} /> : <FontAwesomeIcon className="faEyeSlashIcon" icon={faEye} onClick={handleClickShowConfirmPassword} />}
+            <div className="unc-password">
+              <input
+                className="gv-input-register"
+                type={showPasswordConfirmation ? "text" : "password"}
+                name="confirmPassword"
+                id="confirmPassword"
+                placeholder=" "
+                value={form.confirmPassword}
+                onBlur={handleBlur}
+                onChange={handleChange}
+              />
+              <label htmlFor="confirmPassword" className="gv-label-register">Confirmar contraseña</label>
+              {showPasswordConfirmation ? <FontAwesomeIcon className="faEyeSlashIcon" icon={faEyeSlash} onClick={handleClickShowPasswordConfirmation} /> : <FontAwesomeIcon className="faEyeSlashIcon" icon={faEye} onClick={handleClickShowPasswordConfirmation} />}
+            </div>
+            {errors.confirmPassword && (
+              <p style={styles}>{errors.confirmPassword}</p>
+            )}
           </div>
-          {errors.confirmPassword && (
-            <p style={styles}>{errors.confirmPassword}</p>
-          )}
+        <div className='gv-checkbox-container'>
+            <label className='gv-checkbox-label'>
+                <input type="checkbox" className='gv-checkbox-input' value={form.emailSubscription} />
+                <span className='gv-checkbox-span'></span>
+            </label>
+            <p>Desea recibir publicidad</p>
         </div>
-
         <div className="unc-submit">
           <button type="submit" onClick={handlePost}>Crear cuenta</button>
           <span className="plc-span-form">
             ¿Ya tienes una cuenta?
-            <Link className="anchor-link" to={"/login"}>  Iniciar Sesión</Link>
+            <Link className="anchor-link" to={"/login"}>Iniciar Sesión</Link>
           </span>
         </div>
       </form>

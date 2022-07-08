@@ -5,10 +5,13 @@ const baseUrl = "https://localhost:7190/api";
 export const postUser = async (data) => {
   const endpoint = `${baseUrl}/User`
   const post = {
-    name: data.name,
+    firstName: data.name,
     lastName: data.lastName,
     email: data.email,
-    password: data.password
+    password: data.password,
+    userName: data.userName,
+    phoneNumber: data.phoneNumber,
+    emailSubscription: data.emailSubscription
   }
   return await(
     axios.post(
