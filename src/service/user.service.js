@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const baseUrl = "";
+const baseUrl = "https://localhost:7190/api";
 
 export const postUser = async (data) => {
-  const endpoint = `${baseUrl}/auth/register`
+  const endpoint = `${baseUrl}/User`
   const post = {
     name: data.name,
     lastName: data.lastName,
@@ -27,30 +27,11 @@ export const postUser = async (data) => {
   )
 }
 
-export const getUserByEmail = async (data) => {
-  const endpoint = `${baseUrl}/auth/register`
-  return await(
-    axios.get(
-      endpoint
-    )
-    .then(
-      (res) => {
-        return res
-      }
-    )
-    .catch(
-      (err) => {
-        return err
-      }
-    )
-  )
-}
-
-export const loginUser = async (data) => {
-  const endpoint = `${baseUrl}/auth/login`
+export const loginUser = async (userName, password) => {
+  const endpoint = `${baseUrl}/Login`
   const post = {
-    email: data.email,
-    password: data.password
+    email: userName,
+    password: password
   }
 
   return (

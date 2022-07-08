@@ -10,8 +10,10 @@ import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import Header from "../header";
 
-export default function RegisterForm({ setIsAuthenticated, isAuthenticated, setCredentials }) {
+export default function RegisterForm() {
+  const [isLogged, setIsLogged] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const navigate = useNavigate();
   const { form, errors, handleChange, handleBlur, handleSubmit } = useForm(
     initialForm,
@@ -34,8 +36,7 @@ export default function RegisterForm({ setIsAuthenticated, isAuthenticated, setC
                 tokenJwt: res.data.token
               }
               localStorage.setItem("user", JSON.stringify(user));
-              setIsAuthenticated(true);
-              setCredentials(JSON.parse(window.localStorage.getItem("user")));
+              setIsLogged(true);
             } else {
               swal("Lamentablemente no ha podido iniciar sesión. Por favor, intente más tarde");
             }
@@ -49,13 +50,17 @@ export default function RegisterForm({ setIsAuthenticated, isAuthenticated, setC
   }
 
   useEffect(() => {
-    if (isAuthenticated) {
+    if (isLogged) {
       return navigate("/");
     }
-  }, [isAuthenticated]);
+  }, [isLogged]);
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
+  }
+
+  const handleClickShowConfirmPassword = () => {
+    setShowConfirmPassword(!showConfirmPassword);
   }
 
   const noErrors = (errors) => {
@@ -135,7 +140,7 @@ export default function RegisterForm({ setIsAuthenticated, isAuthenticated, setC
           <div className="unc-password">
             <input
               className="gv-input-register"
-              type={showPassword ? "text" : "password"}
+              type={showConfirmPassword ? "text" : "password"}
               name="confirmPassword"
               id="confirmPassword"
               placeholder=" "
@@ -144,7 +149,7 @@ export default function RegisterForm({ setIsAuthenticated, isAuthenticated, setC
               onChange={handleChange}
             />
             <label htmlFor="confirmPassword" className="gv-label-register">Confirmar contraseña</label>
-            {showPassword ? <FontAwesomeIcon className="faEyeSlashIcon" icon={faEyeSlash} onClick={handleClickShowPassword} /> : <FontAwesomeIcon className="faEyeSlashIcon" icon={faEye} onClick={handleClickShowPassword} />}
+            {showConfirmPassword ? <FontAwesomeIcon className="faEyeSlashIcon" icon={faEyeSlash} onClick={handleClickShowConfirmPassword} /> : <FontAwesomeIcon className="faEyeSlashIcon" icon={faEye} onClick={handleClickShowConfirmPassword} />}
           </div>
           {errors.confirmPassword && (
             <p style={styles}>{errors.confirmPassword}</p>

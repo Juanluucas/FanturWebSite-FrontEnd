@@ -1,43 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 //import '../assets/css/Login.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';
-import md5 from 'md5';
+import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import md5 from "md5";
 import { Link } from "react-router-dom";
-import "./loginForm.css"
-import Cookies from 'universal-cookie';
-import Header from '../header';
+import "./loginForm.css";
+import Cookies from "universal-cookie";
+import Header from "../header";
 
-const baseUrl="http://localhost:3001/usuarios"; // Este es el backend al cual nos comunicamos
+const baseUrl = "http://localhost:3001/usuarios"; // Este es el backend al cual nos comunicamos
 const cookies = new Cookies();
 
-
 class Login extends Component {
-    state={
-        form:{
-          UserName: '',
-          PassWord: ''
-        }
-    }
+  state = {
+    form: {
+      UserName: "",
+      PassWord: "",
+    },
+  };
 
-    handleChange=async e=>{
-        await this.setState({
-            form:{
-                ...this.state.form,
-                [e.target.name]: e.target.value
-            }
-        });
-    }
+  handleChange = (e) => {
+    this.setState({
+      form: {
+        ...this.state.form,
+        [e.target.name]: e.target.value,
+      },
+    });
+  };
 
-    
-
-    iniciarSesion=async()=>{
+  /* iniciarSesion=async()=>{
         
-        /*
-        // Valido que sea un correo electronico
-        var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-        var esValido = expReg.test(this.state.form.username);
-        */
         var esValido = true;      // Borrar esto si, y descomentar lo de arriba para volver a controlar un EMAIL
         if (esValido === true) {
           // aca me empiezo a comunicar con la base de datos
@@ -70,30 +62,15 @@ class Login extends Component {
         else {
           alert('Debe ingresar un correo electronico');
         }
-        
+    } */
 
-    }
-    /*
-      // ACA LO MANDO A LA PAGINA DE YA LOGUEADOS
-    componentDidMount() {
-        if(cookies.get('UserName')){
-          
-            window.location.href="./menu";  
-            cookies.remove('UserName', {path: "/"});
-        }
-    }
-    */
-    
-
-    render() {
-      return (
-        <>
-        <Header/>
+  render() {
+    return (
+      <>
+        <Header />
         <div className="principalLogin">
-          
-          <div className="formLogin" >     
-
-          <div className="input-container-login"> 
+          <div className="formLogin">
+            <div className="input-container-login">
               <br />
               <input
                 type="text"
@@ -101,37 +78,48 @@ class Login extends Component {
                 name="UserName"
                 onChange={this.handleChange}
               />
-              <label htmlFor="usuario" className="label-login">Usuario:</label>
-          </div>
-              <br />
-          <div className="input-container-login">    
-            <div className="unc-password">
-              <br />
-              <input
-                type="password"
-                className="input-login"
-                name="PassWord"
-                onChange={this.handleChange}
-              />
-              <br />
-              
-              <label htmlFor="contraseña" className="label-login">Contraseña:</label>
-            </div>  
-          </div>
+              <label htmlFor="usuario" className="label-login">
+                Usuario:
+              </label>
+            </div>
+            <br />
+            <div className="input-container-login">
+              <div className="unc-password">
+                <br />
+                <input
+                  type="password"
+                  className="input-login"
+                  name="PassWord"
+                  onChange={this.handleChange}
+                />
+                <br />
 
-          <div className="unc-submit">
-          <button className="btn btn-primary" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
-        <span className="plc-span-form">
-          ¿No tienes una cuenta? 
-          <Link className="anchor-link" to={"/register"}> Registrarse</Link>
-        </span>
-      </div>
-            
-          </div>  
+                <label htmlFor="contraseña" className="label-login">
+                  Contraseña:
+                </label>
+              </div>
+            </div>
+
+            <div className="unc-submit">
+              <button
+                className="btn btn-primary"
+                onClick={() => this.iniciarSesion()}
+              >
+                Iniciar Sesión
+              </button>
+              <span className="plc-span-form">
+                ¿No tienes una cuenta?
+                <Link className="anchor-link" to={"/register"}>
+                  {" "}
+                  Registrarse
+                </Link>
+              </span>
+            </div>
+          </div>
         </div>
-        </>     
-            );
-    }
+      </>
+    );
+  }
 }
 
 export default Login;
