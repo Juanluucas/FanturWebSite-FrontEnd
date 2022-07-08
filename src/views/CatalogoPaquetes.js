@@ -8,6 +8,7 @@ function CatalogoPaquetes() {
 
   useEffect(()=>{
     getPaquetes().then((res) => {
+      console.log(res)
       setPaquetes(res);
       return res
     }).catch((err) => {
@@ -86,6 +87,7 @@ function CatalogoPaquetes() {
 
             {paquetes && paquetes.map(paquete =>
               <Paquete
+                id={paquete.id}
                 name={paquete.name}
                 packagePrice={paquete.packagePrice}
                 

@@ -24,7 +24,8 @@ function App() {
             <Route path="/EditarPaquetes" element={<EditarPaquetes/>} />
             <Route path="/PostForm" element={<PostForm/>} />
             <Route path="/register" element={<RegisterForm/>} />
-            <Route path="/carroform" element={<Carroform/>} />
+            <Route path="/carroform/:idpaquete" element={<Carroform/>} />
+            
 
           </Routes>
       </BrowserRouter>
