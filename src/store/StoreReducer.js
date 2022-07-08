@@ -1,7 +1,7 @@
 export const initialStore = {
     user: {
       id: null,
-      fistName: null,
+      firstName: null,
       lastName: null,
       email: null,
       tokenJwt: null,
@@ -22,7 +22,7 @@ export const initialStore = {
           ...state,
           user: {
             id: null,
-            name: null,
+            firstName: null,
             lastName: null,
             email: null,
             tokenJwt: null,

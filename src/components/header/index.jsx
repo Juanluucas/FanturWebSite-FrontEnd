@@ -9,6 +9,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import UserInfo from "../userInfo/index";
 import "./index.css";
+import { useStore } from "../../store/StoreProvider";
 
 const Header = ({ isAuthenticated, setIsAuthenticated, credentials, setCredentials }) => {
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ const Header = ({ isAuthenticated, setIsAuthenticated, credentials, setCredentia
   const [toggleIcon, setToggleIcon] = useState("toggle");
   const [menuActive, setMenuActive] = useState("header__menu");
   const { pathname } = useLocation();
+  const {user, isLogged} = useStore()
 
 
   const closeSession = () => {

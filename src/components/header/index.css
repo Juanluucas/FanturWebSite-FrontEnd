@@ -96,7 +96,7 @@
   width: 28px;
   height: 2px;
   border-radius: 9999px;
-  background-color: var(--color3);
+  background-color: #fff;
 }
 
 .toggle > span:not(:last-child) {

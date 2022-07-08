@@ -33,8 +33,8 @@ export default function LoginForm() {
             console.log(res)
             if (res.status === 200) {
                 const userData = {
-                    id: res.data.id,
-                    name: res.data.name,
+                    id: res.data.userId,
+                    firstName: res.data.firstName,
                     lastName: res.data.lastName,
                     email: res.data.email,
                     tokenJwt: res.data.token,

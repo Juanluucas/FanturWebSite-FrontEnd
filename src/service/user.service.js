@@ -37,7 +37,7 @@ export const loginUser = async (userName, password) => {
   const endpoint = `${baseUrl}/Login`
   const post = {
     userName: userName,
-    password: password
+    passWord: password
   }
 
   return (

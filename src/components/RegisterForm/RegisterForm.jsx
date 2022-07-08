@@ -25,42 +25,36 @@ export default function RegisterForm() {
   );
 
   const handlePost = () => {
-    console.log(form);
-    if (noErrors(errors)) {
-      postUser(form).then((res) => {
-        if (res.status != 201) {
-          swal("Lamentablemente no ha podido registrarse. Por favor, intente más tarde");
-        } else {
-          loginUser(form).then((res) => {
-            if (res.status === 200) {
-              let userData = {
-                id: res.data.userId,
-                name: res.data.firstName,
-                lastName: res.data.lastName,
-                email: res.data.email,
-                tokenJwt: res.data.token,
-                role: res.data.role
-              }
-              dispatch({
-                type: types.authLogin,
-                payload: userData
-              });
-              const storeData = {
-                user: userData,
-                isLogged: true
+    postUser(form).then((res) => {
+      if (res.status === 200) {
+        loginUser(form.username, form.password).then((res) => {
+          if (res.status === 200) {
+            let userData = {
+              id: res.data.userId,
+              firstName: res.data.firstName,
+              lastName: res.data.lastName,
+              email: res.data.email,
+              tokenJwt: res.data.token,
+              rol: res.data.role
+            }
+            dispatch({
+              type: types.authLogin,
+              payload: userData
+            });
+            const storeData = {
+              user: userData,
+              isLogged: true
             }
             localStorage.setItem("store", JSON.stringify(storeData));
-              setIsLogged(true);
-            } else {
-              swal("Lamentablemente no ha podido iniciar sesión. Por favor, intente más tarde");
-            }
+            setIsLogged(true);
+          } else {
+            swal("Lamentablemente no ha podido iniciar sesión. Por favor, intente más tarde");
           }
-          )
-        }
-
-      })
-
-    }
+        })
+      } else {
+        swal("Lamentablemente no ha podido iniciar sesión. Por favor, intente más tarde");
+      }
+    })
   }
 
   useEffect(() => {

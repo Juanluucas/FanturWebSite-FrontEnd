@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import Paquete from "./paquete";
 import {getPaquetes} from "../service/paquetes.service"
 import Header from "../components/header";
+import {useStore} from "../store/StoreProvider"
 
 
 function CatalogoPaquetes() {
   const [ paquetes ,setPaquetes]= useState([])
+  const {user} = useStore();
 
   useEffect(()=>{
     getPaquetes().then((res) => {
@@ -71,9 +73,9 @@ function CatalogoPaquetes() {
 
 
 
-          <li className="main-button paquete-boton">
+          {user.rol === "Customer" && <li className="main-button paquete-boton">
             <a href="/AddPaquetes">+ AÑADIR PAQUETE</a>
-          </li>
+          </li>}
 
           <br />
 
