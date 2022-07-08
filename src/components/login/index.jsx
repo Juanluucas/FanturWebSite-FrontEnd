@@ -27,6 +27,7 @@ export default function LoginForm() {
         const username = data.username;
         const password = data.password;
         loginUser(username, password).then((res) => {
+            console.log(res)
             if (res.status === 200) {
                 const userData = {
                     id: res.data.id,
@@ -34,7 +35,7 @@ export default function LoginForm() {
                     lastName: res.data.lastName,
                     email: res.data.email,
                     tokenJwt: res.data.token,
-                    rol: res.data.rol.rolName
+                    rol: res.data.role
                 }
                 localStorage.setItem("user", JSON.stringify(userData));
                 setIsLogged(true);
@@ -76,7 +77,7 @@ export default function LoginForm() {
                                     message: "El campo es requerido",
                                 },
                                 pattern: {
-                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                    
                                     message: "El formato no es correcto",
                                 },
                             })}

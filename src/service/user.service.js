@@ -30,7 +30,7 @@ export const postUser = async (data) => {
 export const loginUser = async (userName, password) => {
   const endpoint = `${baseUrl}/Login`
   const post = {
-    email: userName,
+    userName: userName,
     password: password
   }
 
