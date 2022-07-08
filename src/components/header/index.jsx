@@ -189,10 +189,10 @@ const Header = ({ isAuthenticated, setIsAuthenticated, credentials, setCredentia
           ) : (
             <div>
               <ul className="buttons">
-                <li className="scroll-to-section"><a href="#top" style={{ color: "#fff" }}>Home</a></li>
-                <li className="scroll-to-section"><a href="#features" style={{ color: "#fff" }}>Nuestros Servicios</a></li>
-                <li className="scroll-to-section"><a href="#our-classes" style={{ color: "#fff" }}>Fases</a></li>
-                <li className="scroll-to-section"><a href="#schedule" style={{ color: "#fff" }}>Conocenos</a></li>
+                {pathname === "/" && <li className="scroll-to-section"><a href="#top" style={{ color: "#fff" }}>Home</a></li>}
+                {pathname === "/" && <li className="scroll-to-section"><a href="#features" style={{ color: "#fff" }}>Nuestros Servicios</a></li>}
+                {pathname === "/" && <li className="scroll-to-section"><a href="#our-classes" style={{ color: "#fff" }}>Fases</a></li>}
+                {pathname === "/" && <li className="scroll-to-section"><a href="#schedule" style={{ color: "#fff" }}>Conocenos</a></li>}
                 {menuOptions.map((item, index) => (
                   <li key={index} className="button">
                     <Link to={item.path}>

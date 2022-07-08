@@ -6,12 +6,15 @@ import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import { loginUser } from "../../service/user.service";
 import Header from "../header";
+import { useDispatch } from "../../store/StoreProvider";
+import { types } from "../../store/StoreReducer";
 
 export default function LoginForm() {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     const [isLogged, setIsLogged] = useState(false);
-    //El context del usuario
+    //El context del usuario 
+    const dispatch = useDispatch();
 
     const {
         register,
@@ -37,7 +40,15 @@ export default function LoginForm() {
                     tokenJwt: res.data.token,
                     rol: res.data.role
                 }
-                localStorage.setItem("user", JSON.stringify(userData));
+                dispatch({
+                    type: types.authLogin,
+                    payload: userData
+                });
+                const storeData = {
+                    user: userData,
+                    isLogged: true
+                }
+                localStorage.setItem("store", JSON.stringify(storeData));
                 setIsLogged(true);
             };
         })
