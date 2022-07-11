@@ -28,7 +28,6 @@ export default function RegisterForm() {
     postUser(form).then((res) => {
       if (res.status === 200) {
         loginUser(form.username, form.password).then((res) => {
-          if (res.status === 200) {
             let userData = {
               id: res.data.userId,
               firstName: res.data.firstName,
@@ -47,9 +46,6 @@ export default function RegisterForm() {
             }
             localStorage.setItem("store", JSON.stringify(storeData));
             setIsLogged(true);
-          } else {
-            swal("Lamentablemente no ha podido iniciar sesión. Por favor, intente más tarde");
-          }
         })
       } else {
         swal("Lamentablemente no ha podido iniciar sesión. Por favor, intente más tarde");

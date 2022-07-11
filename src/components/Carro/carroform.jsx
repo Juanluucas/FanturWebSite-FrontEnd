@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "../header";
 import { postReserva, payment } from "../../service/reserva.service";
 import swal from "sweetalert";
-
+import { useNavigate } from "react-router-dom";
 const styles = {
   container: {
     display: "flex",
@@ -41,8 +41,9 @@ function Carroform() {
   const [reservationId, setReservationId] = useState(null)
   const [error, setError] = useState(null)
   const [cuit, setCuit] = useState(null)
-
+  const navigate = useNavigate();
   const confirmarReserva = () => {
+    
     const data = {
       totalPrice: 500,
       createDate: "2022-07-08T15:03:37.738Z",
@@ -51,7 +52,6 @@ function Carroform() {
     }
     const packageid = parseInt(window.location.pathname.split("/")[2]);
     postReserva(user.id, packageid, data).then(res => {
-      console.log(res);
       if (res.status === 200) {
         setOpen(true);
         setReservationId(res.data.id);
@@ -64,59 +64,109 @@ function Carroform() {
   const handlePayment = () => {
     const data = {
       reservationId: reservationId,
-      cuit: cuit
+      cuit: parseInt(cuit)
     }
-    payment(data).then(res =>{
-      (res.data.aprobada) ? swal("El pago fue exitoso") : swal("El pago fue rechazado");
+    console.log(data);
+    payment(data).then(res => {
+      console.log(res);
+      if (res.data === undefined) { swal("El pago no pudo procesarse, vuelva a intentarlo mas tarde") } else if
+        (res.data.aprobada) { swal("El pago fue exitoso"); navigate("/") } else { swal("El pago fue rechazado"); }
     })
   }
 
+
+
   return (
-    <>
+    <div>
       <Header />
-      <div style={styles.container}>
+      <div className="gv-container-login" style={styles.container}>
         <h2>Iniciar una reserva</h2>
         <div style={styles.form}>
           <form >
-            <div style={styles.label}>
-              <label htmlFor="name" >Nombre</label>
-              <input type="text" disabled={true} name='name' id='name' value={user.firstName} />
+            <div className="gv-input-container-login" style={styles.label}>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder=" "
+                className="gv-input-login"
+                value={user.firstName}
+              />
+              <label htmlFor="username" className="gv-label-login">Nombre</label>
             </div>
-            <div style={styles.label}>
-              <label htmlFor="lastName" >Apellido</label>
-              <input type="text" disabled={true} name='lastName' id='lastName' value={user.lastName} />
+            <div className="gv-input-container-login" style={styles.label}>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder=" "
+                className="gv-input-login"
+                value={user.lastName}
+              />
+              <label htmlFor="username" className="gv-label-login">Apellido</label>
             </div>
-            <div style={styles.label}>
-              <label htmlFor="email" >Correo Electronico</label>
-              <input type="email" disabled={true} name='email' id='email' value={user.email} />
+            <div className="gv-input-container-login" style={styles.label}>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder=" "
+                className="gv-input-login"
+                value={user.email}
+              />
+              <label htmlFor="username" className="gv-label-login">Email</label>
             </div>
           </form>
         </div>
-        {!open && <div style={styles.button} onClick={confirmarReserva}>
-          Confirmar reserva
+        {!open && <div className="button" onClick={confirmarReserva}>
+          <p>Confirmar reserva</p>
         </div>}
+        <>
+          {open && <div>
+            <h3 style={{textAlign: "center", padding:"1rem"}}>Introduzca dus datos para el pago</h3>
+            <div style={styles.form}>
+              <form >
+                <div className="gv-input-container-login" style={styles.label}>
+                  <input
+                    type="number"
+                    id="username"
+                    name="username"
+                    placeholder=" "
+                    className="gv-input-login"
+                    
+                  />
+                  <label htmlFor="username" className="gv-label-login">Numero de tarjeta</label>
+                </div>
+                <div className="gv-input-container-login" style={styles.label}>
+                  <input
+                    type="password"
+                    id="username"
+                    name="username"
+                    placeholder=" "
+                    className="gv-input-login"
+                  />
+                  <label htmlFor="username" className="gv-label-login">Código de tarjeta</label>
+                </div>
+                <div className="gv-input-container-login" style={styles.label}>
+                  <input
+                    type="number"
+                    id="username"
+                    name="username"
+                    placeholder=" "
+                    className="gv-input-login"
+                    onChange={(e) => { setCuit(e.target.value) }}
+                  />
+                  <label htmlFor="username" className="gv-label-login">CUIT</label>
+                </div>
+              </form>
+            </div>
+            <div className="button" onClick={handlePayment}>
+              <p>Pagar</p>
+            </div>
+          </div>}
+        </>
       </div>
-        { open && <div>
-          <h3>Introduzca dus datos para el pago</h3>
-          <form >
-            <div style={styles.label}>
-              <label htmlFor="cuit" >CUIT</label>
-              <input type="number" disabled={true} name='cuit' id='cuit' value="" onChange={(e)=>setCuit(e.target.value)}/>
-            </div>
-            <div style={styles.label}>
-              <label htmlFor="numtarjeta" >Numero de tarjeta</label>
-              <input type="text" disabled={true} name='tarjeta' id='tarjeta' value="" />
-            </div>
-            <div style={styles.label}>
-              <label htmlFor="pin" >Codigo de seguridad</label>
-              <input type="password" disabled={true} name='pin' id='pin' value="" />
-            </div>
-          </form>
-          <div style={styles.button} onClick={handlePayment}>
-            Pagar
-          </div>
-        </div>}
-    </>
+    </div>
   );
 }
 

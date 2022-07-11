@@ -9,26 +9,18 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import UserInfo from "../userInfo/index";
 import "./index.css";
-import { useStore } from "../../store/StoreProvider";
+import { useStore, useDispatch } from "../../store/StoreProvider";
+import IconUserDesk from "../iconUser/IconUserDesk";
+import { types } from "../../store/StoreReducer";
 
-const Header = ({ isAuthenticated, setIsAuthenticated, credentials, setCredentials }) => {
+const Header = () => {
   const navigate = useNavigate();
   const [menuOptions, setMenuOptions] = useState([]);
   const [toggleIcon, setToggleIcon] = useState("toggle");
   const [menuActive, setMenuActive] = useState("header__menu");
   const { pathname } = useLocation();
-  const {user, isLogged} = useStore()
-
-
-  const closeSession = () => {
-    setIsAuthenticated(false);
-    setCredentials({});
-    localStorage.removeItem("user");
-    navigate("/");
-    navToggle();
-  };
-
-
+  const {user, isLogged} = useStore();
+  const dispatch = useDispatch();
 
   const navToggle = () => {
     menuActive === "header__menu"
@@ -39,16 +31,19 @@ const Header = ({ isAuthenticated, setIsAuthenticated, credentials, setCredentia
       : setToggleIcon("toggle");
   };
 
+  const closeSession = () =>{
+    dispatch({
+      type: types.authLogout
+  });
+  navigate("/")
+  }
+
   useEffect(() => {
-    if (isAuthenticated) {
+    if (isLogged) {
       setMenuOptions([
         {
           name: "Mi Cuenta",
           path: "/"
-        },
-        {
-          name: "Mis Reservas",
-          path: "/myreservations"
         }
       ]);
     } else if (pathname === "/login") {
@@ -87,16 +82,16 @@ const Header = ({ isAuthenticated, setIsAuthenticated, credentials, setCredentia
         </Link>
         <div className={menuActive} /*Menu desplegable para version movil */>
           <div className="topMenu">
-            {isAuthenticated ? (
+            {isLogged ? (
               <div className="gv-info-position-top-menu">
-                <UserInfo userName={credentials.name} />
+                <UserInfo userName={user.name} />
               </div>
             ) : (
               <h2 className="gv-info-position-top-menu">Menú</h2>
             )}
           </div>
-          <div className="bottomMenu" style={isAuthenticated ? { justifyContent: "space-between" } : {}}>
-            {isAuthenticated ? (
+          <div className="bottomMenu" style={isLogged ? { justifyContent: "space-between" } : {}}>
+            {isLogged ? (
               <>
                 <div className="gv-menu-list-header-movil">
                   <ul>
@@ -184,9 +179,9 @@ const Header = ({ isAuthenticated, setIsAuthenticated, credentials, setCredentia
         <div
           className="gv-info-desktop-size" /* Esto es donde va a ir la info del user si esta logged o las opciones de inicio de sesion o registro */
         >
-          {isAuthenticated ? (
+          {isLogged ? (
             <div>
-              <UserInfo userName={credentials.name} closeSession={closeSession} />
+              <IconUserDesk closeSession={closeSession}/>
             </div>
           ) : (
             <div>

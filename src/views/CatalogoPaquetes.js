@@ -7,7 +7,7 @@ import {useStore} from "../store/StoreProvider"
 
 function CatalogoPaquetes() {
   const [ paquetes ,setPaquetes]= useState([])
-  const {user} = useStore();
+  const {user, isLogged} = useStore();
 
   useEffect(()=>{
     getPaquetes().then((res) => {
@@ -73,7 +73,7 @@ function CatalogoPaquetes() {
 
 
 
-          {user.rol === "Customer" && <li className="main-button paquete-boton">
+          {user.rol === "Admin" && <li className="main-button paquete-boton">
             <a href="/AddPaquetes">+ AÑADIR PAQUETE</a>
           </li>}
 

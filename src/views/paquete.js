@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "react-router-dom";
+import { useStore } from "../store/StoreProvider";
 import './styles.css';
 
 export default function Paquete(props) {
-    let user;
+    const {user, isLogged} = useStore();
     //aca tenemos que chequear si el usuario es un admin para renderizarle el boton editar
     return (
        
@@ -27,7 +28,7 @@ export default function Paquete(props) {
                         
                         <br/>
                         <li className="main-button paquete-boton">
-                            <Link to={`/carroform/${props.id}`}>COMPRAR</Link>
+                            <Link to={isLogged? `/carroform/${props.id}`: "/login"}>COMPRAR</Link>
                         </li>
                         <br/>
                         {/* {user.Role==="Admin"?<li className="main-button paquete-boton">

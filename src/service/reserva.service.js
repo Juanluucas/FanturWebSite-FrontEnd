@@ -39,6 +39,7 @@ export const postReserva = async (userid, packageid, data) => {
   
     return axios(config)
       .then(function (response) {
+        console.log(response);
         return response
       })
       .catch(function (error) {

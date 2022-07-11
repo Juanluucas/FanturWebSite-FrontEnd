@@ -1,33 +1,25 @@
-import React, {useState} from "react";
-import "./index.css";
-import DropdownMenu from "../dropdownMenu/DropdownMenu";
-import DotMenuIcon from "../dropdownMenu/DotMenuIcon";
+import React from "react";
+import "./userInfo.css";
+import { useStore } from "../../store/StoreProvider";
 
-const UserInfo = ({ userName, closeSession, children }) => {
-  const [open, setOpen] = useState(false);
-  const name = userName.split(" ");
-  
-  const handleOpen = () => {
-    setOpen(!open);
-  }
+const UserInfo = () => {
+  const { user } = useStore();
 
   return (
-    <div style={{display: "flex"}}>
+    <div>
       <div className="gv-container-info">
         <div className='unc-icons-user'>
-          {
-            name.map(i => (
-              <p>{i.slice(0, 1).toUpperCase()}</p>
+          {user.firstName &&
+            user.firstName.split(" ").map((letter, index) => (
+              <p key={index}>{letter.slice(0, 1).toUpperCase()}</p>
             ))
           }
         </div>
         <div className="gv-info">
           <p>Hola,</p>
-          <span>{userName}</span>
+          {user.firstName && <span>{user.firstName}</span>}
         </div>
       </div>
-      {window.innerWidth > 468 ? <DotMenuIcon handleOpen={handleOpen}/> : null}
-      {window.innerWidth > 468 && open && <DropdownMenu menuOptions={children} handleOpen={handleOpen} setMenuOptions={setOpen} closeSession={closeSession}/>}
     </div>
   );
 };

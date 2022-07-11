@@ -245,7 +245,7 @@ body {
 
 .integrantes {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  
 }
 .integrante-name {
   color: white;
@@ -1315,5 +1315,11 @@ responsive
 @media (max-width: 450px) {
   .feature-item .right-content a.text-button {
     margin-left: 130px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .integrantes{
+    grid-template-columns: 20% 20% 20% 20% 20%;
   }
 }

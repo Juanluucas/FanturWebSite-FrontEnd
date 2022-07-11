@@ -71,7 +71,7 @@ export default function LoginForm() {
 
     return (
         <>
-            <Header/>
+            <Header />
             <div className="gv-container-login">
                 <form className="formLogin" onSubmit={handleSubmit(onSubmit)}>
                     <h2>Iniciar sesión</h2>
@@ -88,7 +88,7 @@ export default function LoginForm() {
                                     message: "El campo es requerido",
                                 },
                                 pattern: {
-                                    
+
                                     message: "El formato no es correcto",
                                 },
                             })}
